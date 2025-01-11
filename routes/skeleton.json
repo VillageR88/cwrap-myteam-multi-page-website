@@ -6,6 +6,11 @@
         "rel": "shortcut icon",
         "href": "favicon.ico",
         "type": "image/x-icon"
+      },
+      {
+        "rel": "stylesheet",
+        "href": "https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap",
+        "type": "text/css"
       }
     ],
     "meta": [
@@ -27,7 +32,7 @@
     ]
   },
   "element": "body",
-  "style": "box-sizing: border-box; margin: 0; min-height: 100dvh; padding: 0;",
+  "style": "box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Livvic', serif; margin: 0; min-height: 100dvh; padding: 0;",
   "children": [
     {
       "element": "nav",
@@ -35,14 +40,60 @@
       "children": [
         {
           "element": "div",
-          "style": "margin: 73px; max-width: 1110px;",
+          "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px auto; margin-inline: auto; max-width: 1110px; width: 100%;",
           "children": [
             {
-              "element": "img",
+              "element": "div",
+              "style": "display: flex; gap: 80px;",
+              "children": [
+                {
+                  "element": "img",
+                  "attributes": {
+                    "alt": "My team logo",
+                    "src": "cwrapProperty[prefix=./]static/images/logo.svg"
+                  }
+                },
+                {
+                  "element": "ul",
+                  "style": "align-items: center; box-sizing: border-box; display: flex; gap: 40px; list-style: none; margin: 0; padding: 0;",
+                  "blueprint": {
+                    "count": "2",
+                    "element": "li",
+                    "children": [
+                      {
+                        "element": "a",
+                        "extend": [
+                          {
+                            "extension": ":hover",
+                            "style": "color: #F67E7E"
+                          }
+                        ],
+                        "attributes": {
+                          "class": "text-nav-description-size",
+                          "href": "cwrapProperty[prefix=./]cwrapArray[,about]"
+                        },
+                        "style": "color: white; text-decoration: none; transition: 300ms;",
+                        "text": "cwrapArray[home,about]"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "element": "a",
               "attributes": {
-                "src": "cwrapProperty[prefix=./]static/images/logo.svg"
+                "class": "text-nav-description-size",
+                "href": "cwrapProperty[prefix=./]contact-us"
               },
-              "text": "xyz"
+              "extend": [
+                {
+                  "extension": ":hover",
+                  "style": "color: #002529; background-color: #FFFFFF;"
+                }
+              ],
+              "style": "align-items: center; border-radius: 24px; border: 2px solid white; color: white; display: flex; justify-content: center; max-width: 153px; min-height: 48px; text-decoration: none; transition: 300ms; width: 100%;",
+              "text": "contact us"
             }
           ]
         }

@@ -14,9 +14,11 @@
         "datalist",
         "fieldset",
         "figcaption",
+        "Livvic",
         "noscript",
         "optgroup",
-        "samp"
+        "samp",
+        "stylesheet"
     ],
     "editor.formatOnSave": true,
     "emeraldwalk.runonsave": {
@@ -25,7 +27,6 @@
                 "match": ".*",
                 "cmd": "node sortStyles.js",
                 "runOn": "save",
-                "autoSave": false
             }
         ]
     }

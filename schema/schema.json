@@ -3,6 +3,68 @@
     "title": "Minimal JSON Schema",
     "type": "object",
     "properties": {
+        "head": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "link": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "rel": {
+                                "type": "string"
+                            },
+                            "href": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "rel",
+                            "href"
+                        ]
+                    }
+                },
+                "meta": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "charset": {
+                                "type": "string"
+                            }
+                        },
+                        "oneOf": [
+                            {
+                                "required": [
+                                    "name",
+                                    "content"
+                                ]
+                            },
+                            {
+                                "required": [
+                                    "charset"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "title"
+            ]
+        },
         "element": {
             "anyOf": [
                 {
@@ -21,11 +83,119 @@
             "description": "CSS styles for the element",
             "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
         },
+        "attributes": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "string"
+            }
+        },
         "children": {
             "type": "array",
             "items": {
                 "$ref": "#"
             }
+        },
+        "classroom": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "element",
+                            "class"
+                        ]
+                    },
+                    "style": {
+                        "type": "string",
+                        "description": "CSS styles for the element",
+                        "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+                    },
+                    "mediaQueries": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "query": {
+                                    "type": "string"
+                                },
+                                "style": {
+                                    "type": "string",
+                                    "description": "CSS styles for the media query",
+                                    "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+                                }
+                            },
+                            "required": [
+                                "query",
+                                "style"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "name",
+                    "type",
+                    "style"
+                ]
+            }
         }
-    }
+    },
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "element": {
+                        "enum": [
+                            "ul",
+                            "ol"
+                        ]
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "blueprint": {
+                        "type": "object",
+                        "properties": {
+                            "count": {
+                                "type": "string"
+                            },
+                            "element": {
+                                "type": "string"
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "style": {
+                                "type": "string",
+                                "description": "CSS styles for the element",
+                                "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+                            },
+                            "attributes": {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "type": "string"
+                                }
+                            },
+                            "children": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#"
+                                }
+                            }
+                        },
+                        "required": [
+                            "count",
+                            "element",
+                            "children"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
 }

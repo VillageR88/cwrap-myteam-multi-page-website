@@ -8,13 +8,21 @@ function sortStyles(obj) {
     const styles = obj.style
       .split(";")
       .filter(Boolean)
-      .map((style) => style.trim());
-    styles.sort((a, b) => a.localeCompare(b));
+      .map((style) => style.trim().replace(/\s*:\s*/g, ": "))
+      .sort((a, b) => a.localeCompare(b));
     obj.style = `${styles.join("; ")};`;
   }
 
   if (obj.children && Array.isArray(obj.children)) {
     obj.children.forEach(sortStyles);
+  }
+
+  if (obj.blueprint && typeof obj.blueprint === "object") {
+    sortStyles(obj.blueprint);
+  }
+
+  if (obj.classroom && Array.isArray(obj.classroom)) {
+    obj.classroom.forEach(sortStyles);
   }
 }
 
