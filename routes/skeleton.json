@@ -27,10 +27,26 @@
     ]
   },
   "element": "body",
-  "style": "",
+  "style": "box-sizing: border-box; margin: 0; min-height: 100dvh; padding: 0;",
   "children": [
     {
-      "element": "nav"
+      "element": "nav",
+      "style": "background-color: #014E56; display: flex; min-height: 241px; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "style": "margin: 73px; max-width: 1110px;",
+          "children": [
+            {
+              "element": "img",
+              "attributes": {
+                "src": "cwrapProperty[prefix=./]static/images/logo.svg"
+              },
+              "text": "xyz"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

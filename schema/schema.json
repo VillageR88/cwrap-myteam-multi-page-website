@@ -17,7 +17,9 @@
             "type": "string"
         },
         "style": {
-            "type": "string"
+            "type": "string",
+            "description": "CSS styles for the element",
+            "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
         },
         "children": {
             "type": "array",

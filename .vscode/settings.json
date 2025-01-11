@@ -10,11 +10,23 @@
     ],
     "cSpell.words": [
         "colgroup",
+        "cwrap",
         "datalist",
         "fieldset",
         "figcaption",
         "noscript",
         "optgroup",
         "samp"
-    ]
+    ],
+    "editor.formatOnSave": true,
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": ".*",
+                "cmd": "node sortStyles.js",
+                "runOn": "save",
+                "autoSave": false
+            }
+        ]
+    }
 }
