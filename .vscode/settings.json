@@ -1,0 +1,20 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "skeleton.json",
+                "globals.json"
+            ],
+            "url": "./schema/schema.json"
+        }
+    ],
+    "cSpell.words": [
+        "colgroup",
+        "datalist",
+        "fieldset",
+        "figcaption",
+        "noscript",
+        "optgroup",
+        "samp"
+    ]
+}
