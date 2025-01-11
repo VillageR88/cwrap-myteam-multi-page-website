@@ -1,0 +1,11 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "skeleton.json",
+                "globals.json"
+            ],
+            "url": "./schema.json"
+        }
+    ]
+}

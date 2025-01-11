@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Minimal JSON Schema",
+    "type": "object",
+    "properties": {
+        "element": {
+            "type": "string"
+        },
+        "text": {
+            "type": "string"
+        },
+        "style": {
+            "type": "string"
+        },
+        "children": {
+            "type": "array",
+            "items": {
+                "$ref": "#"
+            }
+        }
+    }
+}
