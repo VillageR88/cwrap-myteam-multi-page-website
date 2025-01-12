@@ -5,12 +5,16 @@ const directoryPath = path.join(process.cwd(), "routes");
 
 function sortStyles(obj) {
   if (obj.style && typeof obj.style === "string") {
-    const styles = obj.style
-      .split(";")
-      .filter(Boolean)
-      .map((style) => style.trim().replace(/\s*:\s*/g, ": "))
-      .sort((a, b) => a.localeCompare(b));
-    obj.style = `${styles.join("; ")};`;
+    // Check if the style contains keyframe percentages
+    const keyframePattern = /\d+%/;
+    if (!keyframePattern.test(obj.style)) {
+      const styles = obj.style
+        .split(";")
+        .filter(Boolean)
+        .map((style) => style.trim().replace(/\s*:\s*/g, ": "))
+        .sort((a, b) => a.localeCompare(b));
+      obj.style = `${styles.join("; ")};`;
+    }
   }
 
   if (obj.children && Array.isArray(obj.children)) {

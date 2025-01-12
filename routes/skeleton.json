@@ -24,36 +24,12 @@
               "style": "display: flex; gap: 80px;",
               "children": [
                 {
-                  "element": "img",
-                  "attributes": {
-                    "alt": "My team logo",
-                    "src": "cwrapProperty[prefix=./]static/images/logo.svg"
-                  }
+                  "element": "cwrap-template",
+                  "text": "cwrapTemplate[logo]"
                 },
                 {
-                  "element": "ul",
-                  "style": "align-items: center; box-sizing: border-box; display: flex; gap: 40px; list-style: none; margin: 0; padding: 0;",
-                  "blueprint": {
-                    "count": "2",
-                    "element": "li",
-                    "children": [
-                      {
-                        "element": "a",
-                        "extend": [
-                          {
-                            "extension": ":hover",
-                            "style": "color: #F67E7E"
-                          }
-                        ],
-                        "attributes": {
-                          "class": "text-description-size1",
-                          "href": "cwrapProperty[prefix=./]cwrapArray[,about]"
-                        },
-                        "style": "color: white; text-decoration: none; transition: 300ms;",
-                        "text": "cwrapArray[home,about]"
-                      }
-                    ]
-                  }
+                  "element": "cwrap-template",
+                  "text": "cwrapTemplate[ulPartialNavigation]"
                 }
               ]
             },
@@ -145,6 +121,7 @@
                   "element": "img",
                   "style": "bottom: -140px; position: absolute; right: calc(-65px - 200px);",
                   "attributes": {
+                    "alt": "background pattern",
                     "src": "static/images/bg-pattern-home-3.svg"
                   }
                 },
@@ -174,7 +151,8 @@
                       {
                         "element": "img",
                         "attributes": {
-                          "src": "cwrapGlobal[home.buildNManage.features.cwrapIndex.image]"
+                          "src": "cwrapGlobal[home.buildNManage.features.cwrapIndex.image]",
+                          "alt": "cwrapGlobal[home.buildNManage.features.cwrapIndex.alt]"
                         }
                       },
                       {
@@ -212,6 +190,7 @@
                   "element": "img",
                   "style": "left: calc(-147px - 18px); position: absolute; top: -140px;",
                   "attributes": {
+                    "alt": "background pattern",
                     "src": "static/images/bg-pattern-home-4-about-3.svg"
                   }
                 },
@@ -219,6 +198,7 @@
                   "element": "img",
                   "style": "bottom: -140px; position: absolute; right: -165px;",
                   "attributes": {
+                    "alt": "background pattern",
                     "src": "static/images/bg-pattern-home-5.svg"
                   }
                 },
@@ -245,7 +225,8 @@
                       {
                         "element": "img",
                         "attributes": {
-                          "src": "static/images/icon-quotes.svg"
+                          "src": "static/images/icon-quotes.svg",
+                          "alt": "quote icon"
                         }
                       },
                       {
@@ -267,7 +248,8 @@
                         "element": "img",
                         "style": "border-radius: 50%; border: 2px solid #C4FFFE; height: 62px; margin-top: 32px; width: 62px;",
                         "attributes": {
-                          "src": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.avatar]"
+                          "src": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.avatar]",
+                          "alt": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"
                         }
                       }
                     ]
@@ -295,6 +277,7 @@
                   "element": "img",
                   "style": "align-items: center; left: calc(-200px - 63px); position: absolute; top: -17px;",
                   "attributes": {
+                    "alt": "background pattern",
                     "src": "static/images/bg-pattern-home-6-about-5.svg"
                   }
                 },
@@ -306,6 +289,83 @@
                 {
                   "element": "cwrap-template",
                   "text": "cwrapTemplate[contactUsLink(customStyle=color: #012F34; border: 2px solid #012F34;,customStyleHover=color: white; background-color: #012F34; border-color: #012F34;)]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "style": "background-color: #002529;",
+          "children": [
+            {
+              "element": "div",
+              "style": "display: flex; justify-content: space-between; margin-block: 48px; margin-inline: auto; max-width: 1110px; min-height: 100px; position: relative; width: 100%;",
+              "children": [
+                {
+                  "element": "div",
+                  "style": "display: flex; gap: 125px;",
+                  "children": [
+                    {
+                      "element": "div",
+                      "style": "display: flex; flex-direction: column; gap: 25px;",
+                      "children": [
+                        {
+                          "element": "cwrap-template",
+                          "text": "cwrapTemplate[logo]"
+                        },
+                        {
+                          "element": "cwrap-template",
+                          "text": "cwrapTemplate[ulPartialNavigation]"
+                        }
+                      ]
+                    },
+                    {
+                      "element": "div",
+                      "style": "color: white; display: flex; flex-direction: column; opacity: 0.6;",
+                      "blueprint": {
+                        "count": "4",
+                        "element": "p",
+                        "text": "cwrapArray[987  Hillcrest Lane,Irvine, CA,California 92714,Call Us : 949-833-7432]"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "element": "div",
+                  "style": "display: flex; flex-direction: column;",
+                  "children": [
+                    {
+                      "element": "ul",
+                      "style": "align-items: center; display: flex; gap: 16px; list-style: none; margin: 0; padding: 0;",
+                      "blueprint": {
+                        "count": "3",
+                        "element": "li",
+                        "children": [
+                          {
+                            "element": "a",
+                            "style": "fill: white; transition: 300ms;",
+                            "extend": [
+                              {
+                                "extension": ":hover",
+                                "style": "fill: #F67E7E;"
+                              }
+                            ],
+                            "attributes": {
+                              "href": "#",
+                              "aria-label": "Social media link"
+                            },
+                            "children": [
+                              {
+                                "element": "cwrap-template",
+                                "text": "cwrapTemplate[cwrapArray[facebookIcon,pinterestIcon,twitterIcon]]"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
                 }
               ]
             }

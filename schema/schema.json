@@ -143,60 +143,41 @@
                     "style"
                 ]
             }
-        }
-    },
-    "allOf": [
-        {
-            "if": {
-                "properties": {
-                    "element": {
-                        "enum": [
-                            "ul",
-                            "ol"
-                        ]
+        },
+        "blueprint": {
+            "type": "object",
+            "properties": {
+                "count": {
+                    "type": "string"
+                },
+                "element": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string",
+                    "description": "CSS styles for the element",
+                    "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+                },
+                "attributes": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "children": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#"
                     }
                 }
             },
-            "then": {
-                "properties": {
-                    "blueprint": {
-                        "type": "object",
-                        "properties": {
-                            "count": {
-                                "type": "string"
-                            },
-                            "element": {
-                                "type": "string"
-                            },
-                            "text": {
-                                "type": "string"
-                            },
-                            "style": {
-                                "type": "string",
-                                "description": "CSS styles for the element",
-                                "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
-                            },
-                            "attributes": {
-                                "type": "object",
-                                "additionalProperties": {
-                                    "type": "string"
-                                }
-                            },
-                            "children": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#"
-                                }
-                            }
-                        },
-                        "required": [
-                            "count",
-                            "element",
-                            "children"
-                        ]
-                    }
-                }
-            }
+            "required": [
+                "count",
+                "element"
+            ]
         }
-    ]
+    }
 }
