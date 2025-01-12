@@ -58,19 +58,8 @@
               ]
             },
             {
-              "element": "a",
-              "attributes": {
-                "class": "text-description-size1",
-                "href": "cwrapProperty[prefix=./]contact-us"
-              },
-              "extend": [
-                {
-                  "extension": ":hover",
-                  "style": "color: #002529; background-color: #FFFFFF;"
-                }
-              ],
-              "style": "align-items: center; border-radius: 24px; border: 2px solid white; color: white; display: flex; justify-content: center; max-width: 153px; min-height: 48px; text-decoration: none; transition: 300ms; width: 100%;",
-              "text": "contact us"
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[contactUsLink]"
             }
           ]
         }
@@ -221,7 +210,7 @@
               "children": [
                 {
                   "element": "img",
-                  "style": "left: -147px; position: absolute; top: -140px;",
+                  "style": "left: calc(-147px - 18px); position: absolute; top: -140px;",
                   "attributes": {
                     "src": "static/images/bg-pattern-home-4-about-3.svg"
                   }
@@ -283,6 +272,40 @@
                       }
                     ]
                   }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "footer",
+      "style": "display: flex; flex-direction: column;",
+      "children": [
+        {
+          "element": "div",
+          "style": "background-color: #F67E7E;",
+          "children": [
+            {
+              "element": "div",
+              "style": "display: flex; justify-content: space-between; margin-block: 76px; margin-inline: auto; max-width: 917px; min-height: 48px; position: relative; width: 100%;",
+              "children": [
+                {
+                  "element": "img",
+                  "style": "align-items: center; left: calc(-200px - 63px); position: absolute; top: -17px;",
+                  "attributes": {
+                    "src": "static/images/bg-pattern-home-6-about-5.svg"
+                  }
+                },
+                {
+                  "element": "h2",
+                  "style": "color: #012F34;",
+                  "text": "Ready to get started?"
+                },
+                {
+                  "element": "cwrap-template",
+                  "text": "cwrapTemplate[contactUsLink(customStyle=color: #012F34; border: 2px solid #012F34;,customStyleHover=color: white; background-color: #012F34; border-color: #012F34;)]"
                 }
               ]
             }

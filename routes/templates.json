@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "element": "a",
+        "name": "contactUsLink",
+        "attributes": {
+            "class": "text-description-size1",
+            "href": "cwrapProperty[prefix=./]contact-us"
+        },
+        "extend": [
+            {
+                "extension": ":hover",
+                "style": "cwrapProperty[customStyleHover=color: #002529; background-color: #FFFFFF;]"
+            }
+        ],
+        "style": "cwrapProperty[customStyle=color: white; border: 2px solid white;]; align-items: center; border-radius: 24px; display: flex; justify-content: center; max-width: 153px; min-height: 48px; text-decoration: none; transition: 300ms; width: 100%;",
+        "text": "contact us"
+    }
+]
