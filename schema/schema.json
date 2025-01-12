@@ -178,6 +178,34 @@
                 "count",
                 "element"
             ]
+        },
+        "passover": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "element": {
+                        "type": "string"
+                    },
+                    "style": {
+                        "type": "string",
+                        "description": "CSS styles for the element",
+                        "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+                    },
+                    "attributes": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "children": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#"
+                        }
+                    }
+                }
+            }
         }
     }
 }

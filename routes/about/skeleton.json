@@ -17,14 +17,14 @@
       "children": [
         {
           "element": "div",
-          "style": "align-items: center; display: flex; margin-inline: auto; max-width: 1110px; min-height: 450px; position: relative; width: 100%;",
+          "style": "align-items: center; display: flex; margin-inline: auto; max-width: 1110px; min-height: 156px; position: relative; width: 100%; margin-bottom: 120px;",
           "children": [
             {
               "element": "img",
-              "style": "bottom: 0; position: absolute; right: 0;",
+              "style": "bottom: -120px; position: absolute; right: calc(-200px - 65px);",
               "attributes": {
                 "alt": "background pattern",
-                "src": "static/images/bg-pattern-home-2.svg"
+                "src": "../static/images/bg-pattern-about-1-mobile-nav-1.svg"
               }
             },
             {
@@ -38,7 +38,7 @@
                 },
                 {
                   "element": "div",
-                  "style": "display: flex; flex-direction: column; gap:40px;  justify-content: space-between; max-width: 445px; width: 100%;",
+                  "style": "display: flex; flex-direction: column; gap:40px;  justify-content: space-between; max-width: 730px; width: 100%;",
                   "children": [
                     {
                       "element": "div",
@@ -50,7 +50,7 @@
                       "attributes": {
                         "class": "text-description-size1"
                       },
-                      "text": "cwrapGlobal[home.hero.description]"
+                      "text": "cwrapGlobal[about.hero.description]"
                     }
                   ]
                 }
