@@ -46,7 +46,7 @@
                           }
                         ],
                         "attributes": {
-                          "class": "text-nav-description-size",
+                          "class": "text-description-size1",
                           "href": "cwrapProperty[prefix=./]cwrapArray[,about]"
                         },
                         "style": "color: white; text-decoration: none; transition: 300ms;",
@@ -60,7 +60,7 @@
             {
               "element": "a",
               "attributes": {
-                "class": "text-nav-description-size",
+                "class": "text-description-size1",
                 "href": "cwrapProperty[prefix=./]contact-us"
               },
               "extend": [
@@ -78,7 +78,7 @@
     },
     {
       "element": "main",
-      "style": "display: flex; flex-direction: column; width: 100%;",
+      "style": "display: flex; flex-direction: column; overflow-x: clip; width: 100%;",
       "children": [
         {
           "element": "div",
@@ -98,7 +98,7 @@
                 },
                 {
                   "element": "div",
-                  "style": "display: flex; gap: 30px; justify-content: space-between; margin-bottom: auto; position: relative; width: 100%;",
+                  "style": "display: flex; gap: 24px; justify-content: space-between; margin-bottom: auto; position: relative; width: 100%;",
                   "children": [
                     {
                       "element": "img",
@@ -111,11 +111,11 @@
                     {
                       "element": "h1",
                       "style": "color: white; font-size: 100px; font-weight: bold; line-height: 100px; margin: 0; max-width: 615px; width: 100%;",
-                      "text": "Find the best cwrapSpan",
+                      "text": "cwrapGlobal[home.hero.h1Title] cwrapSpan",
                       "children": [
                         {
                           "element": "span",
-                          "text": "talent",
+                          "text": "cwrapGlobal[home.hero.h1TitleDistinction]",
                           "style": "color: #F67E7E;"
                         }
                       ]
@@ -132,9 +132,9 @@
                           "element": "p",
                           "style": "color: white;",
                           "attributes": {
-                            "class": "text-nav-description-size"
+                            "class": "text-description-size1"
                           },
-                          "text": "Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that."
+                          "text": "cwrapGlobal[home.hero.description]"
                         }
                       ]
                     }
@@ -146,7 +146,70 @@
         },
         {
           "element": "div",
-          "style": "background-color: #012F34; min-height: 684px;"
+          "style": "background-color: #012F34;",
+          "children": [
+            {
+              "element": "div",
+              "style": "display: flex; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; min-height: 404px; position: relative; width: 100%;",
+              "children": [
+                {
+                  "element": "img",
+                  "style": "bottom: -140px; position: absolute; right: calc(-65px - 200px);",
+                  "attributes": {
+                    "src": "static/images/bg-pattern-home-3.svg"
+                  }
+                },
+                {
+                  "element": "div",
+                  "style": "display: flex; flex-direction: column; gap: 54px; max-width: 445px;",
+                  "children": [
+                    {
+                      "element": "div",
+                      "style": "background-color: #F67E7E; height: 4px; width: 50px;"
+                    },
+                    {
+                      "element": "h2",
+                      "style": "color: white;",
+                      "text": "cwrapGlobal[home.buildNManage.h2Title]"
+                    }
+                  ]
+                },
+                {
+                  "element": "ul",
+                  "style": "box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; list-style: none; margin: 58px 0 0 0; max-width: 540px; padding: 0px;",
+                  "blueprint": {
+                    "count": "3",
+                    "element": "li",
+                    "style": "align-items: start; display: flex; gap: 23px;",
+                    "children": [
+                      {
+                        "element": "img",
+                        "attributes": {
+                          "src": "cwrapGlobal[home.buildNManage.features.cwrapIndex.image]"
+                        }
+                      },
+                      {
+                        "element": "section",
+                        "style": "display: flex; flex-direction: column; gap: 16px;",
+                        "children": [
+                          {
+                            "element": "h3",
+                            "style": "color: #F67E7E;",
+                            "text": "cwrapGlobal[home.buildNManage.features.cwrapIndex.title]"
+                          },
+                          {
+                            "element": "p",
+                            "style": "color: white; opacity: 0.8;",
+                            "text": "cwrapGlobal[home.buildNManage.features.cwrapIndex.description]"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

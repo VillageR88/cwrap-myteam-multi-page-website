@@ -104,7 +104,11 @@
                         "type": "string",
                         "enum": [
                             "element",
-                            "class"
+                            "class",
+                            "id",
+                            "pseudo:",
+                            "pseudo::",
+                            "custom"
                         ]
                     },
                     "style": {

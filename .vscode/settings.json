@@ -2,10 +2,15 @@
     "json.schemas": [
         {
             "fileMatch": [
-                "skeleton.json",
-                "globals.json"
+                "skeleton.json"
             ],
             "url": "./schema/schema.json"
+        },
+        {
+            "fileMatch": [
+                "globals.json"
+            ],
+            "url": "./schema/globals-schema.json"
         }
     ],
     "cSpell.words": [
@@ -26,7 +31,7 @@
             {
                 "match": ".*",
                 "cmd": "node sortStyles.js",
-                "runOn": "save",
+                "runOn": "save"
             }
         ]
     }

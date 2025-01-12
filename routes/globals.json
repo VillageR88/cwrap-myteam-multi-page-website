@@ -28,9 +28,53 @@
   },
   "classroom": [
     {
-      "name": "text-nav-description-size",
+      "name": "text-description-size1",
       "type": "class",
       "style": "font-size: 18px; font-weight: 600; line-height: 28px; margin: 0;"
+    },
+    {
+      "name": "h2",
+      "type": "element",
+      "style": "font-size: 48px; font-weight: bold; line-height: 48px; margin: 0;"
+    },
+    {
+      "name": "h3",
+      "type": "element",
+      "style": "font-size: 18px; font-weight: bold; line-height: 28px; margin: 0;"
+    },
+    {
+      "name": "p",
+      "type": "element",
+      "style": "font-size: 15px; font-weight: 600; line-height: 25px; margin: 0;"
     }
-  ]
+  ],
+  "const": {
+    "home": {
+      "hero": {
+        "h1Title": "Find the best",
+        "h1TitleDistinction": "talent",
+        "description": "Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that."
+      },
+      "buildNManage": {
+        "h2Title": "Build & manage distributed teams like no one else.",
+        "features": [
+          {
+            "image": "static/images/icon-person.svg",
+            "title": "Experienced Individuals",
+            "description": "Our network is made up of highly experienced professionals who are passionate about what they do."
+          },
+          {
+            "image": "static/images/icon-cog.svg",
+            "title": "Easy to Implement",
+            "description": "Our processes have been refined over years of implementation meaning our teams always deliver."
+          },
+          {
+            "image": "static/images/icon-chart.svg",
+            "title": "Enhanced Productivity",
+            "description": "Our customized platform with in-built analytics helps you manage your distributed teams."
+          }
+        ]
+      }
+    }
+  }
 }
