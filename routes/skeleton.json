@@ -1,33 +1,10 @@
 {
   "head": {
-    "title": "New Candy Wrapper project",
     "link": [
       {
         "rel": "shortcut icon",
         "href": "favicon.ico",
         "type": "image/x-icon"
-      },
-      {
-        "rel": "stylesheet",
-        "href": "https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap",
-        "type": "text/css"
-      }
-    ],
-    "meta": [
-      {
-        "name": "viewport",
-        "content": "width=device-width, initial-scale=1.0"
-      },
-      {
-        "charset": "UTF-8"
-      },
-      {
-        "name": "description",
-        "content": "New Candy Wrapper project."
-      },
-      {
-        "name": "keywords",
-        "content": ""
       }
     ]
   },
@@ -96,6 +73,80 @@
               "text": "contact us"
             }
           ]
+        }
+      ]
+    },
+    {
+      "element": "main",
+      "style": "display: flex; flex-direction: column; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "style": "background-color: #014E56;",
+          "children": [
+            {
+              "element": "div",
+              "style": "align-items: center; display: flex; margin-inline: auto; max-width: 1110px; min-height: 450px; position: relative; width: 100%;",
+              "children": [
+                {
+                  "element": "img",
+                  "style": "bottom: 0; position: absolute; right: 0;",
+                  "attributes": {
+                    "alt": "background pattern",
+                    "src": "static/images/bg-pattern-home-2.svg"
+                  }
+                },
+                {
+                  "element": "div",
+                  "style": "display: flex; gap: 30px; justify-content: space-between; margin-bottom: auto; position: relative; width: 100%;",
+                  "children": [
+                    {
+                      "element": "img",
+                      "style": "left: calc(-200px - 65px); position: absolute;",
+                      "attributes": {
+                        "alt": "background pattern",
+                        "src": "static/images/bg-pattern-home-1.svg"
+                      }
+                    },
+                    {
+                      "element": "h1",
+                      "style": "color: white; font-size: 100px; font-weight: bold; line-height: 100px; margin: 0; max-width: 615px; width: 100%;",
+                      "text": "Find the best cwrapSpan",
+                      "children": [
+                        {
+                          "element": "span",
+                          "text": "talent",
+                          "style": "color: #F67E7E;"
+                        }
+                      ]
+                    },
+                    {
+                      "element": "div",
+                      "style": "display: flex; flex-direction: column; justify-content: space-between; max-width: 445px; width: 100%;",
+                      "children": [
+                        {
+                          "element": "div",
+                          "style": "background-color: #79C8C7; height: 4px; width: 50px;"
+                        },
+                        {
+                          "element": "p",
+                          "style": "color: white;",
+                          "attributes": {
+                            "class": "text-nav-description-size"
+                          },
+                          "text": "Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "style": "background-color: #012F34; min-height: 684px;"
         }
       ]
     }
