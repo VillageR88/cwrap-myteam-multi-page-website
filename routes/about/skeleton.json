@@ -3,12 +3,67 @@
     "link": [
       {
         "rel": "shortcut icon",
-        "href": "favicon.ico",
+        "href": "../favicon.ico",
         "type": "image/x-icon"
       }
     ]
   },
   "element": "cwrap-template",
   "text": "cwrapTemplate[body(prefix=../)]",
-  "passover": []
+  "passover": [
+    {
+      "element": "div",
+      "style": "background-color: #014E56;",
+      "children": [
+        {
+          "element": "div",
+          "style": "align-items: center; display: flex; margin-inline: auto; max-width: 1110px; min-height: 450px; position: relative; width: 100%;",
+          "children": [
+            {
+              "element": "img",
+              "style": "bottom: 0; position: absolute; right: 0;",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "static/images/bg-pattern-home-2.svg"
+              }
+            },
+            {
+              "element": "div",
+              "style": "display: flex; gap: 24px; justify-content: space-between; margin-bottom: auto; position: relative; width: 100%;",
+              "children": [
+                {
+                  "element": "h1",
+                  "style": "max-width: 350px; width: 100%; font-size: 64px;",
+                  "text": "cwrapGlobal[about.hero.h1Title]"
+                },
+                {
+                  "element": "div",
+                  "style": "display: flex; flex-direction: column; gap:40px;  justify-content: space-between; max-width: 445px; width: 100%;",
+                  "children": [
+                    {
+                      "element": "div",
+                      "style": "background-color: #F67E7E; height: 4px; width: 50px;"
+                    },
+                    {
+                      "element": "p",
+                      "style": "color: white;",
+                      "attributes": {
+                        "class": "text-description-size1"
+                      },
+                      "text": "cwrapGlobal[home.hero.description]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "div",
+      "style": "background-color: #F67E7E; height: 200px;",
+      "text": "placeholder for contrast"
+    }
+  ]
 }

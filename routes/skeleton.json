@@ -12,220 +12,214 @@
   "text": "cwrapTemplate[body]",
   "passover": [
     {
-      "element": "main",
-      "style": "display: flex; flex-direction: column; overflow-x: clip; width: 100%;",
+      "element": "div",
+      "style": "background-color: #014E56;",
       "children": [
         {
           "element": "div",
-          "style": "background-color: #014E56;",
+          "style": "align-items: center; display: flex; margin-inline: auto; max-width: 1110px; min-height: 450px; position: relative; width: 100%;",
           "children": [
             {
+              "element": "img",
+              "style": "bottom: 0; position: absolute; right: 0;",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "static/images/bg-pattern-home-2.svg"
+              }
+            },
+            {
               "element": "div",
-              "style": "align-items: center; display: flex; margin-inline: auto; max-width: 1110px; min-height: 450px; position: relative; width: 100%;",
+              "style": "display: flex; gap: 24px; justify-content: space-between; margin-bottom: auto; position: relative; width: 100%;",
               "children": [
                 {
                   "element": "img",
-                  "style": "bottom: 0; position: absolute; right: 0;",
+                  "style": "left: calc(-200px - 65px); position: absolute;",
                   "attributes": {
                     "alt": "background pattern",
-                    "src": "static/images/bg-pattern-home-2.svg"
+                    "src": "static/images/bg-pattern-home-1.svg"
                   }
                 },
                 {
-                  "element": "div",
-                  "style": "display: flex; gap: 24px; justify-content: space-between; margin-bottom: auto; position: relative; width: 100%;",
-                  "children": [
-                    {
-                      "element": "img",
-                      "style": "left: calc(-200px - 65px); position: absolute;",
-                      "attributes": {
-                        "alt": "background pattern",
-                        "src": "static/images/bg-pattern-home-1.svg"
-                      }
-                    },
-                    {
-                      "element": "h1",
-                      "style": "color: white; font-size: 100px; font-weight: bold; line-height: 100px; margin: 0; max-width: 615px; width: 100%;",
-                      "text": "cwrapGlobal[home.hero.h1Title] cwrapSpan",
-                      "children": [
-                        {
-                          "element": "span",
-                          "text": "cwrapGlobal[home.hero.h1TitleDistinction]",
-                          "style": "color: #F67E7E;"
-                        }
-                      ]
-                    },
-                    {
-                      "element": "div",
-                      "style": "display: flex; flex-direction: column; justify-content: space-between; max-width: 445px; width: 100%;",
-                      "children": [
-                        {
-                          "element": "div",
-                          "style": "background-color: #79C8C7; height: 4px; width: 50px;"
-                        },
-                        {
-                          "element": "p",
-                          "style": "color: white;",
-                          "attributes": {
-                            "class": "text-description-size1"
-                          },
-                          "text": "cwrapGlobal[home.hero.description]"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "element": "div",
-          "style": "background-color: #012F34;",
-          "children": [
-            {
-              "element": "div",
-              "style": "display: flex; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; min-height: 404px; position: relative; width: 100%;",
-              "children": [
-                {
-                  "element": "img",
-                  "style": "bottom: -140px; position: absolute; right: calc(-65px - 200px);",
-                  "attributes": {
-                    "alt": "background pattern",
-                    "src": "static/images/bg-pattern-home-3.svg"
-                  }
-                },
-                {
-                  "element": "div",
-                  "style": "display: flex; flex-direction: column; gap: 54px; max-width: 445px;",
-                  "children": [
-                    {
-                      "element": "div",
-                      "style": "background-color: #F67E7E; height: 4px; width: 50px;"
-                    },
-                    {
-                      "element": "h2",
-                      "style": "color: white;",
-                      "text": "cwrapGlobal[home.buildNManage.h2Title]"
-                    }
-                  ]
-                },
-                {
-                  "element": "ul",
-                  "style": "box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; list-style: none; margin: 58px 0 0 0; max-width: 540px; padding: 0px;",
-                  "blueprint": {
-                    "count": "3",
-                    "element": "li",
-                    "style": "align-items: start; display: flex; gap: 23px;",
-                    "children": [
-                      {
-                        "element": "img",
-                        "attributes": {
-                          "src": "cwrapGlobal[home.buildNManage.features.cwrapIndex.image]",
-                          "alt": "cwrapGlobal[home.buildNManage.features.cwrapIndex.alt]"
-                        }
-                      },
-                      {
-                        "element": "section",
-                        "style": "display: flex; flex-direction: column; gap: 16px;",
-                        "children": [
-                          {
-                            "element": "h3",
-                            "style": "color: #F67E7E;",
-                            "text": "cwrapGlobal[home.buildNManage.features.cwrapIndex.title]"
-                          },
-                          {
-                            "element": "p",
-                            "style": "color: white; opacity: 0.8;",
-                            "text": "cwrapGlobal[home.buildNManage.features.cwrapIndex.description]"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "element": "div",
-          "style": "background-color: #004047;",
-          "children": [
-            {
-              "element": "div",
-              "style": "align-items: center; display: flex; flex-direction: column; gap: 56px; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; position: relative; text-align: center; width: 100%;",
-              "children": [
-                {
-                  "element": "img",
-                  "style": "left: calc(-147px - 18px); position: absolute; top: -140px;",
-                  "attributes": {
-                    "alt": "background pattern",
-                    "src": "static/images/bg-pattern-home-4-about-3.svg"
-                  }
-                },
-                {
-                  "element": "img",
-                  "style": "bottom: -140px; position: absolute; right: -165px;",
-                  "attributes": {
-                    "alt": "background pattern",
-                    "src": "static/images/bg-pattern-home-5.svg"
-                  }
-                },
-                {
-                  "element": "h2",
-                  "style": "color: white; max-width: 932px;",
-                  "text": "cwrapGlobal[home.deliveringReal.h2Title] cwrapSpan",
+                  "element": "h1",
+                  "style": "max-width: 615px; width: 100%;",
+                  "text": "cwrapGlobal[home.hero.h1Title] cwrapSpan",
                   "children": [
                     {
                       "element": "span",
-                      "style": "color: #79C8C7;",
-                      "text": "cwrapGlobal[home.deliveringReal.h2TitleDistinction]"
+                      "text": "cwrapGlobal[home.hero.h1TitleDistinction]",
+                      "style": "color: #F67E7E;"
                     }
                   ]
                 },
                 {
-                  "element": "ul",
-                  "style": "box-sizing: border-box; display: flex; gap: 24px; justify-content: space-between; list-style: none; margin: 0; padding: 0; width: 100%;",
-                  "blueprint": {
-                    "count": "3",
-                    "element": "li",
-                    "style": "align-items: center; display: flex; flex-direction: column; max-width: 350px; width: 100%;",
+                  "element": "div",
+                  "style": "display: flex; flex-direction: column; justify-content: space-between; max-width: 445px; width: 100%;",
+                  "children": [
+                    {
+                      "element": "div",
+                      "style": "background-color: #79C8C7; height: 4px; width: 50px;"
+                    },
+                    {
+                      "element": "p",
+                      "style": "color: white;",
+                      "attributes": {
+                        "class": "text-description-size1"
+                      },
+                      "text": "cwrapGlobal[home.hero.description]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "div",
+      "style": "background-color: #012F34;",
+      "children": [
+        {
+          "element": "div",
+          "style": "display: flex; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; min-height: 404px; position: relative; width: 100%;",
+          "children": [
+            {
+              "element": "img",
+              "style": "bottom: -140px; position: absolute; right: calc(-65px - 200px);",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "static/images/bg-pattern-home-3.svg"
+              }
+            },
+            {
+              "element": "div",
+              "style": "display: flex; flex-direction: column; gap: 54px; max-width: 445px;",
+              "children": [
+                {
+                  "element": "div",
+                  "style": "background-color: #F67E7E; height: 4px; width: 50px;"
+                },
+                {
+                  "element": "h2",
+                  "style": "color: white;",
+                  "text": "cwrapGlobal[home.buildNManage.h2Title]"
+                }
+              ]
+            },
+            {
+              "element": "ul",
+              "style": "box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; list-style: none; margin: 58px 0 0 0; max-width: 540px; padding: 0px;",
+              "blueprint": {
+                "count": "3",
+                "element": "li",
+                "style": "align-items: start; display: flex; gap: 23px;",
+                "children": [
+                  {
+                    "element": "img",
+                    "attributes": {
+                      "src": "cwrapGlobal[home.buildNManage.features.cwrapIndex.image]",
+                      "alt": "cwrapGlobal[home.buildNManage.features.cwrapIndex.alt]"
+                    }
+                  },
+                  {
+                    "element": "section",
+                    "style": "display: flex; flex-direction: column; gap: 16px;",
                     "children": [
                       {
-                        "element": "img",
-                        "attributes": {
-                          "src": "static/images/icon-quotes.svg",
-                          "alt": "quote icon"
-                        }
-                      },
-                      {
-                        "element": "p",
-                        "style": "color: white; margin-top: -20px;",
-                        "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.story]"
-                      },
-                      {
                         "element": "h3",
-                        "style": "color: #79C8C7; margin-top: 24px;",
-                        "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"
+                        "style": "color: #F67E7E;",
+                        "text": "cwrapGlobal[home.buildNManage.features.cwrapIndex.title]"
                       },
                       {
                         "element": "p",
-                        "style": "color: white; font-size: 13px; font-style: italic; font-weight: 500; line-height: 18px; margin-top: 2px;",
-                        "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.position]"
-                      },
-                      {
-                        "element": "img",
-                        "style": "border-radius: 50%; border: 2px solid #C4FFFE; height: 62px; margin-top: 32px; width: 62px;",
-                        "attributes": {
-                          "src": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.avatar]",
-                          "alt": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"
-                        }
+                        "style": "color: white; opacity: 0.8;",
+                        "text": "cwrapGlobal[home.buildNManage.features.cwrapIndex.description]"
                       }
                     ]
                   }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "div",
+      "style": "background-color: #004047;",
+      "children": [
+        {
+          "element": "div",
+          "style": "align-items: center; display: flex; flex-direction: column; gap: 56px; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; position: relative; text-align: center; width: 100%;",
+          "children": [
+            {
+              "element": "img",
+              "style": "left: calc(-147px - 18px); position: absolute; top: -140px;",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "static/images/bg-pattern-home-4-about-3.svg"
+              }
+            },
+            {
+              "element": "img",
+              "style": "bottom: -140px; position: absolute; right: -165px;",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "static/images/bg-pattern-home-5.svg"
+              }
+            },
+            {
+              "element": "h2",
+              "style": "color: white; max-width: 932px;",
+              "text": "cwrapGlobal[home.deliveringReal.h2Title] cwrapSpan",
+              "children": [
+                {
+                  "element": "span",
+                  "style": "color: #79C8C7;",
+                  "text": "cwrapGlobal[home.deliveringReal.h2TitleDistinction]"
                 }
               ]
+            },
+            {
+              "element": "ul",
+              "style": "box-sizing: border-box; display: flex; gap: 24px; justify-content: space-between; list-style: none; margin: 0; padding: 0; width: 100%;",
+              "blueprint": {
+                "count": "3",
+                "element": "li",
+                "style": "align-items: center; display: flex; flex-direction: column; max-width: 350px; width: 100%;",
+                "children": [
+                  {
+                    "element": "img",
+                    "attributes": {
+                      "src": "static/images/icon-quotes.svg",
+                      "alt": "quote icon"
+                    }
+                  },
+                  {
+                    "element": "p",
+                    "style": "color: white; margin-top: -20px;",
+                    "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.story]"
+                  },
+                  {
+                    "element": "h3",
+                    "style": "color: #79C8C7; margin-top: 24px;",
+                    "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"
+                  },
+                  {
+                    "element": "p",
+                    "style": "color: white; font-size: 13px; font-style: italic; font-weight: 500; line-height: 18px; margin-top: 2px;",
+                    "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.position]"
+                  },
+                  {
+                    "element": "img",
+                    "style": "border-radius: 50%; border: 2px solid #C4FFFE; height: 62px; margin-top: 32px; width: 62px;",
+                    "attributes": {
+                      "src": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.avatar]",
+                      "alt": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"
+                    }
+                  }
+                ]
+              }
             }
           ]
         }

@@ -53,6 +53,11 @@
       "style": "font-size: 18px; font-weight: 600; line-height: 28px; margin: 0;"
     },
     {
+      "name": "h1",
+      "type": "element",
+      "style": "color: white; font-size: 100px; font-weight: bold; line-height: 100px; margin: 0;"
+    },
+    {
       "name": "h2",
       "type": "element",
       "style": "font-size: 48px; font-weight: bold; line-height: 48px; margin: 0;"
@@ -118,6 +123,12 @@
             "avatar": "static/images/avatar-arthur.jpg"
           }
         ]
+      }
+    },
+    "about": {
+      "hero": {
+        "h1Title": "About",
+        "description": "We help companies build dynamic teams made up of top global talent. Using our network of passionate professionals we drive innovation and deliver incredible outcomes. Talented, diverse teams shape the best products and experiences. We’ll bring those teams to you."
       }
     }
   }

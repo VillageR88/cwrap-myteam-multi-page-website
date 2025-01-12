@@ -4,29 +4,27 @@ const path = require("node:path");
 const directoryPath = path.join(process.cwd(), "routes");
 
 function sortStyles(obj) {
-  if (obj.style && typeof obj.style === "string") {
-    // Check if the style contains keyframe percentages
-    const keyframePattern = /\d+%/;
-    if (!keyframePattern.test(obj.style)) {
-      const styles = obj.style
-        .split(";")
-        .filter(Boolean)
-        .map((style) => style.trim().replace(/\s*:\s*/g, ": "))
-        .sort((a, b) => a.localeCompare(b));
-      obj.style = `${styles.join("; ")};`;
+  if (typeof obj !== "object" || obj === null) {
+    return;
+  }
+
+  for (const key in obj) {
+    if (key === "style" && typeof obj[key] === "string") {
+      // Check if the style contains keyframe percentages
+      const keyframePattern = /\d+%/;
+      if (!keyframePattern.test(obj[key])) {
+        const styles = obj[key]
+          .split(";")
+          .filter(Boolean)
+          .map((style) => style.trim().replace(/\s*:\s*/g, ": "))
+          .sort((a, b) => a.localeCompare(b));
+        obj[key] = `${styles.join("; ")};`;
+      }
+    } else if (typeof obj[key] === "object") {
+      sortStyles(obj[key]);
+    } else if (Array.isArray(obj[key])) {
+      obj[key].forEach(sortStyles);
     }
-  }
-
-  if (obj.children && Array.isArray(obj.children)) {
-    obj.children.forEach(sortStyles);
-  }
-
-  if (obj.blueprint && typeof obj.blueprint === "object") {
-    sortStyles(obj.blueprint);
-  }
-
-  if (obj.classroom && Array.isArray(obj.classroom)) {
-    obj.classroom.forEach(sortStyles);
   }
 }
 

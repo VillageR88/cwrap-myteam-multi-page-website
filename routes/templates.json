@@ -137,7 +137,13 @@
                 ]
             },
             {
-                "element": "cwrap-passover"
+                "element": "main",
+                "style": "display: flex; flex-direction: column; overflow-x: clip; width: 100%;",
+                "children": [
+                    {
+                        "element": "cwrap-passover"
+                    }
+                ]
             },
             {
                 "element": "footer",
