@@ -1,3 +1,4 @@
+// filepath: /c:/Users/Karol/Documents/GitHub/cwrap-myteam-multi-page-website/.vscode/settings.json
 {
     "json.schemas": [
         {
@@ -14,25 +15,17 @@
         }
     ],
     "cSpell.words": [
+        "Aiysha",
         "colgroup",
         "cwrap",
         "datalist",
         "fieldset",
         "figcaption",
+        "Kady",
         "Livvic",
         "noscript",
         "optgroup",
         "samp",
         "stylesheet"
     ],
-    "editor.formatOnSave": true,
-    "emeraldwalk.runonsave": {
-        "commands": [
-            {
-                "match": ".*",
-                "cmd": "node sortStyles.js",
-                "runOn": "save"
-            }
-        ]
-    }
 }

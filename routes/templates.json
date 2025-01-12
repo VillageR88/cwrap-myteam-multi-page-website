@@ -21,7 +21,7 @@
                     "extend": [
                         {
                             "extension": ":hover",
-                            "style": "color: #F67E7E"
+                            "style": "color: #F67E7E;"
                         }
                     ],
                     "attributes": {
