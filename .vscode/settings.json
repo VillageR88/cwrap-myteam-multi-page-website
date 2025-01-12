@@ -1,9 +1,9 @@
-// filepath: /c:/Users/Karol/Documents/GitHub/cwrap-myteam-multi-page-website/.vscode/settings.json
 {
     "json.schemas": [
         {
             "fileMatch": [
-                "skeleton.json"
+                "skeleton.json",
+                "globals.json"
             ],
             "url": "./schema/schema.json"
         },
@@ -21,11 +21,25 @@
         "datalist",
         "fieldset",
         "figcaption",
+        "Hillcrest",
         "Kady",
         "Livvic",
+        "myteam",
         "noscript",
         "optgroup",
+        "pinterest",
         "samp",
         "stylesheet"
     ],
+    "editor.formatOnSave": true,
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": ".*",
+                "cmd": "node sortStyles.js",
+                "runOn": "save",
+                "autoSave": false,
+            }
+        ]
+    }
 }

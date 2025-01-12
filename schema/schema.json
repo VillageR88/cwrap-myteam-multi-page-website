@@ -12,52 +12,13 @@
                 "link": {
                     "type": "array",
                     "items": {
-                        "type": "object",
-                        "properties": {
-                            "rel": {
-                                "type": "string"
-                            },
-                            "href": {
-                                "type": "string"
-                            },
-                            "type": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "rel",
-                            "href"
-                        ]
+                        "$ref": "#/$defs/linkItem"
                     }
                 },
                 "meta": {
                     "type": "array",
                     "items": {
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "content": {
-                                "type": "string"
-                            },
-                            "charset": {
-                                "type": "string"
-                            }
-                        },
-                        "oneOf": [
-                            {
-                                "required": [
-                                    "name",
-                                    "content"
-                                ]
-                            },
-                            {
-                                "required": [
-                                    "charset"
-                                ]
-                            }
-                        ]
+                        "$ref": "#/$defs/metaItem"
                     }
                 }
             }
@@ -76,9 +37,7 @@
             "type": "string"
         },
         "style": {
-            "type": "string",
-            "description": "CSS styles for the element",
-            "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+            "$ref": "#/$defs/style"
         },
         "attributes": {
             "type": "object",
@@ -95,53 +54,7 @@
         "classroom": {
             "type": "array",
             "items": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string"
-                    },
-                    "type": {
-                        "type": "string",
-                        "enum": [
-                            "element",
-                            "class",
-                            "id",
-                            "pseudo:",
-                            "pseudo::",
-                            "custom"
-                        ]
-                    },
-                    "style": {
-                        "type": "string",
-                        "description": "CSS styles for the element",
-                        "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
-                    },
-                    "mediaQueries": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "query": {
-                                    "type": "string"
-                                },
-                                "style": {
-                                    "type": "string",
-                                    "description": "CSS styles for the media query",
-                                    "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
-                                }
-                            },
-                            "required": [
-                                "query",
-                                "style"
-                            ]
-                        }
-                    }
-                },
-                "required": [
-                    "name",
-                    "type",
-                    "style"
-                ]
+                "$ref": "#/$defs/classroomItem"
             }
         },
         "blueprint": {
@@ -157,9 +70,7 @@
                     "type": "string"
                 },
                 "style": {
-                    "type": "string",
-                    "description": "CSS styles for the element",
-                    "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+                    "$ref": "#/$defs/style"
                 },
                 "attributes": {
                     "type": "object",
@@ -188,9 +99,7 @@
                         "type": "string"
                     },
                     "style": {
-                        "type": "string",
-                        "description": "CSS styles for the element",
-                        "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+                        "$ref": "#/$defs/style"
                     },
                     "attributes": {
                         "type": "object",
@@ -206,6 +115,103 @@
                     }
                 }
             }
+        }
+    },
+    "$defs": {
+        "style": {
+            "type": "string",
+            "description": "CSS styles for the element",
+            "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+        },
+        "linkItem": {
+            "type": "object",
+            "properties": {
+                "rel": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "rel",
+                "href"
+            ]
+        },
+        "metaItem": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "charset": {
+                    "type": "string"
+                }
+            },
+            "oneOf": [
+                {
+                    "required": [
+                        "name",
+                        "content"
+                    ]
+                },
+                {
+                    "required": [
+                        "charset"
+                    ]
+                }
+            ]
+        },
+        "classroomItem": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "element",
+                        "class",
+                        "id",
+                        "pseudo:",
+                        "pseudo::",
+                        "custom"
+                    ]
+                },
+                "style": {
+                    "$ref": "#/$defs/style"
+                },
+                "mediaQueries": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "query": {
+                                "type": "string"
+                            },
+                            "style": {
+                                "$ref": "#/$defs/style"
+                            }
+                        },
+                        "required": [
+                            "query",
+                            "style"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "type",
+                "style"
+            ]
         }
     }
 }

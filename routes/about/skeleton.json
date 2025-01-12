@@ -24,7 +24,7 @@
               "style": "bottom: -120px; position: absolute; right: calc(-200px - 65px);",
               "attributes": {
                 "alt": "background pattern",
-                "src": "../static/images/bg-pattern-about-1-mobile-nav-1.svg"
+                "src": "../static/images/bg-pattern-about-1-mobile-nav-1.svg     "
               }
             },
             {
@@ -62,11 +62,17 @@
     },
     {
       "element": "div",
-      "style": "background-color: #004047; margin-block: 120px; min-height: 772px;",
+      "style": "background-color: #004047;",
       "children": [
         {
           "element": "div",
-          "style": "max-width: 1110px; width: 100%; display: flex; flex-direction: column;"
+          "style": "max-width: 1110px; width: 100%; display: flex;  flex-direction: column; align-items:  center; margin-inline: auto; margin-block: 120px; min-height: 772px;",
+          "children": [
+            {
+              "element": "h2",
+              "text": "meee"
+            }
+          ]
         }
       ]
     }

@@ -27,7 +27,7 @@ const CWRAP_DIR = isDevelopment
 
 // Create and configure the livereload server
 const liveReloadServer = livereload.createServer({
-  exts: ["js", "json"],
+  exts: ["json"],
   exclusions: [/dist/],
 });
 liveReloadServer.watch(ROOT_DIR);
