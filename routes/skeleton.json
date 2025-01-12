@@ -8,39 +8,9 @@
       }
     ]
   },
-  "element": "body",
-  "style": "box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Livvic', serif; margin: 0; min-height: 100dvh; padding: 0;",
-  "children": [
-    {
-      "element": "nav",
-      "style": "background-color: #014E56; display: flex; min-height: 241px; width: 100%;",
-      "children": [
-        {
-          "element": "div",
-          "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px auto; margin-inline: auto; max-width: 1110px; width: 100%;",
-          "children": [
-            {
-              "element": "div",
-              "style": "display: flex; gap: 80px;",
-              "children": [
-                {
-                  "element": "cwrap-template",
-                  "text": "cwrapTemplate[logo]"
-                },
-                {
-                  "element": "cwrap-template",
-                  "text": "cwrapTemplate[ulPartialNavigation]"
-                }
-              ]
-            },
-            {
-              "element": "cwrap-template",
-              "text": "cwrapTemplate[contactUsLink]"
-            }
-          ]
-        }
-      ]
-    },
+  "element": "cwrap-template",
+  "text": "cwrapTemplate[body]",
+  "passover": [
     {
       "element": "main",
       "style": "display: flex; flex-direction: column; overflow-x: clip; width: 100%;",
@@ -254,123 +224,6 @@
                       }
                     ]
                   }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "element": "footer",
-      "style": "display: flex; flex-direction: column;",
-      "children": [
-        {
-          "element": "div",
-          "style": "background-color: #F67E7E;",
-          "children": [
-            {
-              "element": "div",
-              "style": "display: flex; justify-content: space-between; margin-block: 76px; margin-inline: auto; max-width: 917px; min-height: 48px; position: relative; width: 100%;",
-              "children": [
-                {
-                  "element": "img",
-                  "style": "align-items: center; left: calc(-200px - 63px); position: absolute; top: -17px;",
-                  "attributes": {
-                    "alt": "background pattern",
-                    "src": "static/images/bg-pattern-home-6-about-5.svg"
-                  }
-                },
-                {
-                  "element": "h2",
-                  "style": "color: #012F34;",
-                  "text": "Ready to get started?"
-                },
-                {
-                  "element": "cwrap-template",
-                  "text": "cwrapTemplate[contactUsLink(customStyle=color: #012F34; border: 2px solid #012F34;,customStyleHover=color: white; background-color: #012F34; border-color: #012F34;)]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "element": "div",
-          "style": "background-color: #002529;",
-          "children": [
-            {
-              "element": "div",
-              "style": "display: flex; justify-content: space-between; margin-block: 48px; margin-inline: auto; max-width: 1110px; min-height: 100px; position: relative; width: 100%;",
-              "children": [
-                {
-                  "element": "div",
-                  "style": "display: flex; gap: 125px;",
-                  "children": [
-                    {
-                      "element": "div",
-                      "style": "display: flex; flex-direction: column; gap: 25px;",
-                      "children": [
-                        {
-                          "element": "cwrap-template",
-                          "text": "cwrapTemplate[logo]"
-                        },
-                        {
-                          "element": "cwrap-template",
-                          "text": "cwrapTemplate[ulPartialNavigation]"
-                        }
-                      ]
-                    },
-                    {
-                      "element": "div",
-                      "style": "color: white; display: flex; flex-direction: column; opacity: 0.6;",
-                      "blueprint": {
-                        "count": "4",
-                        "element": "p",
-                        "text": "cwrapArray[987  Hillcrest Lane cwrapBreak Irvine, CA cwrapBreak California 92714 cwrapBreak Call Us : 949-833-7432]"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "element": "div",
-                  "style": "align-items: end; display: flex; flex-direction: column; justify-content: space-between;",
-                  "children": [
-                    {
-                      "element": "ul",
-                      "style": "align-items: center; display: flex; gap: 16px; list-style: none; margin: 0; padding: 0;",
-                      "blueprint": {
-                        "count": "3",
-                        "element": "li",
-                        "children": [
-                          {
-                            "element": "a",
-                            "style": "fill: white; transition: 300ms;",
-                            "extend": [
-                              {
-                                "extension": ":hover",
-                                "style": "fill: #F67E7E;"
-                              }
-                            ],
-                            "attributes": {
-                              "href": "#",
-                              "aria-label": "Social media link"
-                            },
-                            "children": [
-                              {
-                                "element": "cwrap-template",
-                                "text": "cwrapTemplate[cwrapArray[facebookIcon,pinterestIcon,twitterIcon]]"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "element": "p",
-                      "style": "color: white; opacity: 0.6;",
-                      "text": "Copyright 2020. All Rights Reserved"
-                    }
-                  ]
                 }
               ]
             }
