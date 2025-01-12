@@ -210,6 +210,83 @@
               ]
             }
           ]
+        },
+        {
+          "element": "div",
+          "style": "background-color: #004047;",
+          "children": [
+            {
+              "element": "div",
+              "style": "align-items: center; display: flex; flex-direction: column; gap: 56px; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; position: relative; text-align: center; width: 100%;",
+              "children": [
+                {
+                  "element": "img",
+                  "style": "left: -147px; position: absolute; top: -140px;",
+                  "attributes": {
+                    "src": "static/images/bg-pattern-home-4-about-3.svg"
+                  }
+                },
+                {
+                  "element": "img",
+                  "style": "bottom: -140px; position: absolute; right: -165px;",
+                  "attributes": {
+                    "src": "static/images/bg-pattern-home-5.svg"
+                  }
+                },
+                {
+                  "element": "h2",
+                  "style": "color: white; max-width: 932px;",
+                  "text": "cwrapGlobal[home.deliveringReal.h2Title] cwrapSpan",
+                  "children": [
+                    {
+                      "element": "span",
+                      "style": "color: #79C8C7;",
+                      "text": "cwrapGlobal[home.deliveringReal.h2TitleDistinction]"
+                    }
+                  ]
+                },
+                {
+                  "element": "ul",
+                  "style": "box-sizing: border-box; display: flex; gap: 24px; justify-content: space-between; list-style: none; margin: 0; padding: 0; width: 100%;",
+                  "blueprint": {
+                    "count": "3",
+                    "element": "li",
+                    "style": "align-items: center; display: flex; flex-direction: column; max-width: 350px; width: 100%;",
+                    "children": [
+                      {
+                        "element": "img",
+                        "attributes": {
+                          "src": "static/images/icon-quotes.svg"
+                        }
+                      },
+                      {
+                        "element": "p",
+                        "style": "color: white; margin-top: -20px;",
+                        "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.story]"
+                      },
+                      {
+                        "element": "h3",
+                        "style": "color: #79C8C7; margin-top: 24px;",
+                        "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"
+                      },
+                      {
+                        "element": "p",
+                        "style": "color: white; font-size: 13px; font-style: italic; font-weight: 500; line-height: 18px; margin-top: 2px;",
+                        "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.position]"
+                      },
+                      {
+                        "element": "img",
+                        "style": "border-radius: 50%; border: 2px solid #C4FFFE; height: 62px; margin-top: 32px; width: 62px;",
+                        "attributes": {
+                          "src": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.avatar]"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
