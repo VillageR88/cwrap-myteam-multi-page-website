@@ -10,9 +10,9 @@ function sortStyles(obj) {
 
   for (const key in obj) {
     if (key === "style" && typeof obj[key] === "string") {
-      // Check if the style contains keyframe percentages
-      const keyframePattern = /\d+%/;
-      if (!keyframePattern.test(obj[key])) {
+      // Check if the style contains keyframe percentages or braces
+      const bracesPattern = /{.*}/;
+      if (!bracesPattern.test(obj[key])) {
         const styles = obj[key]
           .split(";")
           .filter(Boolean)

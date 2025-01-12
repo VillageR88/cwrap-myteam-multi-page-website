@@ -121,7 +121,7 @@
         "style": {
             "type": "string",
             "description": "CSS styles for the element",
-            "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;)*\\s*$"
+            "pattern": "^(\\s*([a-zA-Z-]+)\\s*:\\s*[^;]+\\s*;|\\s*[0-9]+%\\s*\\{[^\\}]+\\}\\s*)*$"
         },
         "linkItem": {
             "type": "object",
