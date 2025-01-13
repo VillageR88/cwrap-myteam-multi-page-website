@@ -35,10 +35,18 @@ function processFile(filePath) {
       return;
     }
 
-    const json = JSON.parse(data);
+    let json;
+    try {
+      json = JSON.parse(data);
+    } catch (parseErr) {
+      console.error("Error parsing JSON:", parseErr);
+      return;
+    }
+
     sortStyles(json);
 
-    fs.writeFile(filePath, JSON.stringify(json, null, 2), "utf8", (err) => {
+    const sortedJson = JSON.stringify(json, null, 2);
+    fs.writeFile(filePath, sortedJson, "utf8", (err) => {
       if (err) {
         console.error("Error writing file:", err);
         return;

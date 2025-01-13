@@ -28,6 +28,16 @@
   },
   "classroom": [
     {
+      "name": "@keyframes shrink",
+      "type": "custom",
+      "style": "0% { transform: translateX(0%) scaleX(1); } 50% { transform: translateX(0%) scaleX(0); } 100% { transform: translateX(0%) scaleX(0); }"
+    },
+    {
+      "name": "@keyframes grow",
+      "type": "custom",
+      "style": "0% { transform: translateX(0%) scaleX(0); } 50% { transform: translateX(0%) scaleX(0); } 100% { transform: translateX(0%) scaleX(1); }"
+    },
+    {
       "name": "*",
       "type": "element",
       "style": "scrollbar-color: #2C6269 #012F34;"

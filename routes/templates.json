@@ -25,6 +25,7 @@
                         }
                     ],
                     "attributes": {
+                        "rel": "prefetch",
                         "class": "text-description-size1",
                         "href": "cwrapProperty[prefix=./]cwrapArray[,about]"
                     },
@@ -38,6 +39,7 @@
         "element": "a",
         "name": "contactUsLink",
         "attributes": {
+            "rel": "prefetch",
             "class": "text-description-size1",
             "href": "cwrapProperty[prefix=./]contact-us"
         },
