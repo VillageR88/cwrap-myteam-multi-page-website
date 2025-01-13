@@ -145,27 +145,39 @@
         "directors": [
           {
             "avatar": "static/images/avatar-nikita.jpg",
-            "name": "Nikita Marks"
+            "name": "Nikita Marks",
+            "position": "Founder & CEO",
+            "testimony": "“It always amazes me how much talent there is in every corner of the globe.”"
           },
           {
             "avatar": "static/images/avatar-christian.jpg",
-            "name": "Cristian Duncan"
+            "name": "Cristian Duncan",
+            "position": "Co-founder & COO",
+            "testimony": "“Distributed teams required unique processes. You need to approach work in a new way.”"
           },
           {
             "avatar": "static/images/avatar-cruz.jpg",
-            "name": "Cruz Hamer"
+            "name": "Cruz Hamer",
+            "position": "Co-founder & CTO",
+            "testimony": "“Technology is at the forefront of enabling distributed teams. That's where we come in.”"
           },
           {
             "avatar": "static/images/avatar-drake.jpg",
-            "name": "Drake Heaton"
+            "name": "Drake Heaton",
+            "position": "Business Development Lead",
+            "testimony": "“Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”"
           },
           {
             "avatar": "static/images/avatar-griffin.jpg",
-            "name": "Griffin Wise"
+            "name": "Griffin Wise",
+            "position": "Lead Marketing",
+            "testimony": "“Unique perspectives shape unique products, which is what you need to survive these days.”"
           },
           {
             "avatar": "static/images/avatar-aden.jpg",
-            "name": "Aden Allan"
+            "name": "Aden Allan",
+            "position": "Head of Talent",
+            "testimony": "“Empowered teams create truly amazing products. Set the north star and let them follow it.”"
           }
         ]
       }

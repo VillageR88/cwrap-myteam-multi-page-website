@@ -110,7 +110,7 @@
                       {
                         "element": "p",
                         "style": "color: white; font-style: italic; font-weight: 500;",
-                        "text": "cwrapGlobal[about.meetDirectors.directors.cwrapIndex.name]"
+                        "text": "cwrapGlobal[about.meetDirectors.directors.cwrapIndex.position]"
                       },
                       {
                         "element": "label",
@@ -141,11 +141,47 @@
                   },
                   {
                     "element": "div",
-                    "style": "align-items: center; background-color: #012F34; display: flex; flex-direction: column; height: 100%; max-width: 350px; min-height: 253px; overflow-x: clip; position: absolute; top: 0; transform: translateX(0%) scaleX(0); transition: 300ms; width: 100%; z-index: 0;",
+                    "style": "align-items: center; background-color: #012F34; display: flex; flex-direction: column; height: 100%; max-width: 350px; min-height: 253px; overflow-x: clip; position: absolute; text-align: center; top: 0; transform: translateX(0%) scaleX(0); transition: 300ms; width: 100%; z-index: 0;",
                     "children": [
                       {
                         "element": "h3",
+                        "style": "color: #79C8C7; margin-top: 35px;",
                         "text": "cwrapGlobal[about.meetDirectors.directors.cwrapIndex.name]"
+                      },
+                      {
+                        "element": "p",
+                        "style": "color: white; margin-top: 8px; max-width: 254px;",
+                        "text": "cwrapGlobal[about.meetDirectors.directors.cwrapIndex.testimony]"
+                      },
+                      {
+                        "element": "ul",
+                        "style": "align-items: center; box-sizing: border-box; display: flex; gap: 16px; list-style: none; margin-top: 24px; padding: 0;",
+                        "blueprint": {
+                          "count": "2",
+                          "element": "li",
+                          "children": [
+                            {
+                              "element": "a",
+                              "attributes": {
+                                "href": "#",
+                                "aria-label": "Social media link"
+                              },
+                              "extend": [
+                                {
+                                  "extension": ":hover",
+                                  "style": "fill: #F67E7E; transition: 300ms;"
+                                }
+                              ],
+                              "style": "fill: white;",
+                              "children": [
+                                {
+                                  "element": "cwrap-template",
+                                  "text": "cwrapArray[cwrapTemplate[cwrapArray[twitterIcon,linkedinIcon]] cwrapBreak cwrapArray[1,2] cwrapBreak cwrapArray[1,2]]"
+                                }
+                              ]
+                            }
+                          ]
+                        }
                       }
                     ]
                   }

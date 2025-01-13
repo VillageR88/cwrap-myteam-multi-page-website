@@ -208,9 +208,19 @@ function createElementFromJson(
         } else if (part.startsWith("cwrapTemplate")) {
           const propMap = new Map(properties);
 
-          const templateNameWithProps = part.match(
-            /cwrapTemplate\[([^\]]+)\]/
-          )[1];
+          let templateNameWithProps;
+          if (isDevelopment) {
+            try {
+              templateNameWithProps = part.match(
+                /cwrapTemplate\[([^\]]+)\]/
+              )[1];
+            } catch (error) {
+              console.error("Error processing template:", part, error);
+              continue;
+            }
+          } else {
+            templateNameWithProps = part.match(/cwrapTemplate\[([^\]]+)\]/)[1];
+          }
           const templateName =
             templateNameWithProps.match(/.+(?=\()/)?.[0] ||
             templateNameWithProps;
