@@ -28,6 +28,21 @@
   },
   "classroom": [
     {
+      "name": "@property --dynamic-time-one",
+      "type": "custom",
+      "style": "inherits: true; initial-value: 0s; syntax: \"<time>\";"
+    },
+    {
+      "name": "@property --dynamic-time-two",
+      "type": "custom",
+      "style": "inherits: true; initial-value: 0s; syntax: \"<time>\";"
+    },
+    {
+      "name": "main div:nth-of-type(2):hover",
+      "type": "custom",
+      "style": "--dynamic-time-one: 0.3s; --dynamic-time-two: 0.38s;"
+    },
+    {
       "name": "@keyframes shrink",
       "type": "custom",
       "style": "0% { transform: translateX(0%) scaleX(1); } 50% { transform: translateX(0%) scaleX(0); } 100% { transform: translateX(0%) scaleX(0); }"
@@ -36,6 +51,16 @@
       "name": "@keyframes grow",
       "type": "custom",
       "style": "0% { transform: translateX(0%) scaleX(0); } 50% { transform: translateX(0%) scaleX(0); } 100% { transform: translateX(0%) scaleX(1); }"
+    },
+    {
+      "name": "@keyframes shrinkgrow",
+      "type": "custom",
+      "style": "0% { transform: translateX(0%) scaleX(1); } 25% { transform: translateX(0%) scaleX(0); } 50% { transform: translateX(0%) scaleX(0); } 75% { transform: translateX(0%) scaleX(1); } 100% { transform: translateX(0%) scaleX(1); }"
+    },
+    {
+      "name": "@keyframes growshrink",
+      "type": "custom",
+      "style": "0% { transform: translateX(0%) scaleX(1); } 25% { transform: translateX(0%) scaleX(1); } 50% { transform: translateX(0%) scaleX(0); } 75% { transform: translateX(0%) scaleX(0); } 100% { transform: translateX(0%) scaleX(1); }"
     },
     {
       "name": "*",

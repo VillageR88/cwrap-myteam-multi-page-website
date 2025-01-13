@@ -66,8 +66,24 @@
       "children": [
         {
           "element": "div",
-          "style": "align-items: center; display: flex; flex-direction: column; gap: 64px; margin-block: 120px; margin-inline: auto; max-width: 1110px; min-height: 772px; width: 100%;",
+          "style": "align-items: center; display: flex; flex-direction: column; gap: 64px; margin-block: 120px; margin-inline: auto; max-width: 1110px; min-height: 772px; position: relative; width: 100%;",
           "children": [
+            {
+              "element": "img",
+              "style": "left: calc(-200px - 65px); position: absolute; top: -120px;",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "../static/images/bg-pattern-about-2-contact-1.svg"
+              }
+            },
+            {
+              "element": "img",
+              "style": "bottom: -120px; position: absolute; right: calc(-147px - 18px);",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "../static/images/bg-pattern-home-4-about-3.svg"
+              }
+            },
             {
               "element": "h2",
               "style": "color: white;",
@@ -82,14 +98,30 @@
                 "extend": [
                   {
                     "extension": ":has(input:checked) > div:nth-of-type(1)",
-                    "style": "animation: shrink linear 0.3s forwards;"
+                    "style": "animation: shrink linear var(--dynamic-time-one) forwards;"
                   },
                   {
                     "extension": ":has(input:checked) > div:nth-of-type(2)",
-                    "style": "animation: grow linear 0.3s forwards;"
+                    "style": "animation: grow linear var(--dynamic-time-one) forwards;"
+                  },
+                  {
+                    "extension": "> div:nth-of-type(1)",
+                    "style": "animation: grow linear var(--dynamic-time-one) forwards;"
+                  },
+                  {
+                    "extension": "> div:nth-of-type(2)",
+                    "style": "animation: shrink linear var(--dynamic-time-one) forwards;"
+                  },
+                  {
+                    "extension": ":has(input:checked) label",
+                    "style": "animation: shrinkgrow linear var(--dynamic-time-two) forwards;"
+                  },
+                  {
+                    "extension": " label",
+                    "style": "animation: growshrink linear var(--dynamic-time-two) reverse;"
                   }
                 ],
-                "style": "max-width: 350px; position: relative; width: 100%;",
+                "style": "justify-content: center; max-width: 350px; position: relative; width: 100%;",
                 "children": [
                   {
                     "element": "div",
@@ -111,37 +143,12 @@
                         "element": "p",
                         "style": "color: white; font-style: italic; font-weight: 500;",
                         "text": "cwrapGlobal[about.meetDirectors.directors.cwrapIndex.position]"
-                      },
-                      {
-                        "element": "label",
-                        "extend": [
-                          {
-                            "extension": ":hover",
-                            "style": "background-color: #79C8C7;"
-                          }
-                        ],
-                        "style": "align-items: center; background-color: #F67E7E; border-radius: 50%; border: none; bottom: -28px; cursor: pointer; display: flex; height: 56px; justify-content: center; position: absolute; transition: 300ms; width: 56px;",
-                        "children": [
-                          {
-                            "element": "input",
-                            "style": "cursor: pointer; opacity: 0; position: absolute;",
-                            "attributes": {
-                              "type": "checkbox"
-                            }
-                          },
-                          {
-                            "element": "img",
-                            "attributes": {
-                              "src": "../static/images/icon-cross.svg"
-                            }
-                          }
-                        ]
                       }
                     ]
                   },
                   {
                     "element": "div",
-                    "style": "align-items: center; background-color: #012F34; display: flex; flex-direction: column; height: 100%; max-width: 350px; min-height: 253px; overflow-x: clip; position: absolute; text-align: center; top: 0; transform: translateX(0%) scaleX(0); transition: 300ms; width: 100%; z-index: 0;",
+                    "style": "align-items: center; background-color: #002529; display: flex; flex-direction: column; height: 100%; max-width: 350px; min-height: 253px; overflow-x: clip; position: absolute; text-align: center; top: 0; transform: translateX(0%) scaleX(0); transition: 300ms; width: 100%; z-index: 0;",
                     "children": [
                       {
                         "element": "h3",
@@ -157,7 +164,7 @@
                         "element": "ul",
                         "style": "align-items: center; box-sizing: border-box; display: flex; gap: 16px; list-style: none; margin-top: 24px; padding: 0;",
                         "blueprint": {
-                          "count": "2",
+                          "count": "3",
                           "element": "li",
                           "children": [
                             {
@@ -176,7 +183,7 @@
                               "children": [
                                 {
                                   "element": "cwrap-template",
-                                  "text": "cwrapArray[cwrapTemplate[cwrapArray[twitterIcon,linkedinIcon]] cwrapBreak cwrapArray[1,2] cwrapBreak cwrapArray[1,2]]"
+                                  "text": "cwrapArray[cwrapTemplate[cwrapArray[twitterIcon,linkedinIcon,cwrapOmit]] cwrapBreak cwrapTemplate[cwrapArray[facebookIcon,twitterIcon,linkedinIcon]] cwrapBreak cwrapTemplate[cwrapArray[facebookIcon,twitterIcon,cwrapOmit]] cwrapBreak cwrapTemplate[cwrapArray[facebookIcon,pinterestIcon,cwrapOmit]] cwrapBreak cwrapTemplate[cwrapArray[facebookIcon,pinterestIcon,linkedinIcon]] cwrapBreak cwrapTemplate[cwrapArray[twitterIcon,linkedinIcon,cwrapOmit]]]"
                                 }
                               ]
                             }
@@ -184,6 +191,126 @@
                         }
                       }
                     ]
+                  },
+                  {
+                    "element": "label",
+                    "extend": [
+                      {
+                        "extension": ":hover",
+                        "style": "background-color: #79C8C7;"
+                      },
+                      {
+                        "extension": ":has(input:checked):hover",
+                        "style": "background-color: #F67E7E;"
+                      },
+                      {
+                        "extension": ":has(input:checked)",
+                        "style": "background-color: #79C8C7;"
+                      },
+                      {
+                        "extension": ":has(input:checked) > img",
+                        "style": "transform: rotate(45deg);"
+                      }
+                    ],
+                    "style": "align-items: center; background-color: #F67E7E; border-radius: 50%; border: none; bottom: -28px; cursor: pointer; display: flex; height: 56px; justify-content: center; left: calc(50% - 56px * 0.5); position: absolute; transition: 300ms; width: 56px; z-index: 1;",
+                    "children": [
+                      {
+                        "element": "input",
+                        "style": "cursor: pointer; opacity: 0; position: absolute;",
+                        "attributes": {
+                          "id": "inputcwrapIndex",
+                          "type": "checkbox"
+                        }
+                      },
+                      {
+                        "element": "img",
+                        "style": "transition: transform 0.2s cubic-bezier(0.68, 0, 1, 1);",
+                        "attributes": {
+                          "src": "../static/images/icon-cross.svg"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "div",
+      "style": "background-color: #012F34;",
+      "children": [
+        {
+          "element": "div",
+          "style": "align-items: center; display: flex; flex-direction: column; gap: 56px; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; position: relative; text-align: center; width: 100%;",
+          "children": [
+            {
+              "element": "img",
+              "style": "left: calc(-147px - 18px); position: absolute; top: -140px;",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "static/images/bg-pattern-home-4-about-3.svg"
+              }
+            },
+            {
+              "element": "img",
+              "style": "bottom: -140px; position: absolute; right: -165px;",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "static/images/bg-pattern-home-5.svg"
+              }
+            },
+            {
+              "element": "h2",
+              "style": "color: white; max-width: 932px;",
+              "text": "cwrapGlobal[home.deliveringReal.h2Title] cwrapSpan",
+              "children": [
+                {
+                  "element": "span",
+                  "style": "color: #79C8C7;",
+                  "text": "cwrapGlobal[home.deliveringReal.h2TitleDistinction]"
+                }
+              ]
+            },
+            {
+              "element": "ul",
+              "style": "box-sizing: border-box; display: flex; gap: 24px; justify-content: space-between; list-style: none; margin: 0; padding: 0; width: 100%;",
+              "blueprint": {
+                "count": "3",
+                "element": "li",
+                "style": "align-items: center; display: flex; flex-direction: column; max-width: 350px; width: 100%;",
+                "children": [
+                  {
+                    "element": "img",
+                    "attributes": {
+                      "src": "static/images/icon-quotes.svg",
+                      "alt": "quote icon"
+                    }
+                  },
+                  {
+                    "element": "p",
+                    "style": "color: white; margin-top: -20px;",
+                    "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.story]"
+                  },
+                  {
+                    "element": "h3",
+                    "style": "color: #79C8C7; margin-top: 24px;",
+                    "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"
+                  },
+                  {
+                    "element": "p",
+                    "style": "color: white; font-size: 13px; font-style: italic; font-weight: 500; line-height: 18px; margin-top: 2px;",
+                    "text": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.position]"
+                  },
+                  {
+                    "element": "img",
+                    "style": "border-radius: 50%; border: 2px solid #C4FFFE; height: 62px; margin-top: 32px; width: 62px;",
+                    "attributes": {
+                      "src": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.avatar]",
+                      "alt": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"
+                    }
                   }
                 ]
               }
