@@ -1027,7 +1027,28 @@ function generateCssSelector(
     if (omit.includes(jsonObj["omit-id"])) {
       return;
     }
-    const element = jsonObj.element;
+    let element = jsonObj.element;
+
+    if (jsonObj.element.includes("cwrapProperty")) {
+      const parts = jsonObj.element.split(/(cwrapProperty\[[^\]]+\])/g);
+      let finalElement = "";
+
+      for (const part of parts) {
+        if (part.startsWith("cwrapProperty")) {
+          const propertyMatch = part.match(
+            /cwrapProperty\[([^\]=]+)=([^\]]+)\]/
+          );
+          if (propertyMatch) {
+            const [property, defaultValue] = propertyMatch.slice(1);
+            const mapValue = propsMap?.get(property);
+            finalElement += mapValue || defaultValue;
+          }
+        } else {
+          finalElement += part;
+        }
+      }
+      element = finalElement;
+    }
     if (!jsonObj.text) jsonObj.text = "";
 
     // Handle cwrap-fragment elements

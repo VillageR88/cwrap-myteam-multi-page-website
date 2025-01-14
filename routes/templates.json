@@ -173,7 +173,7 @@
                         "style": "background-color: #F67E7E;",
                         "children": [
                             {
-                                "element": "div",
+                                "element": "cwrapProperty[omitFooterFirst=div]",
                                 "style": "display: flex; justify-content: space-between; margin-block: 76px; margin-inline: auto; max-width: 917px; min-height: 48px; position: relative; width: 100%;",
                                 "children": [
                                     {
