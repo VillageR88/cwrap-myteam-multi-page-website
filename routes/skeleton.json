@@ -9,7 +9,7 @@
     ]
   },
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body]",
+  "text": "cwrapTemplate[body(omitScript=cwrapOmit)]",
   "passover": [
     {
       "element": "div",
