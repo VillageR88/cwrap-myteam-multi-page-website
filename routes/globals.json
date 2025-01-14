@@ -28,6 +28,11 @@
   },
   "classroom": [
     {
+      "name": "@view-transition",
+      "type": "custom",
+      "style": "navigation: auto;"
+    },
+    {
       "name": "@property --dynamic-time-one",
       "type": "custom",
       "style": "inherits: true; initial-value: 0s; syntax: \"<time>\";"
@@ -36,11 +41,6 @@
       "name": "@property --dynamic-time-two",
       "type": "custom",
       "style": "inherits: true; initial-value: 0s; syntax: \"<time>\";"
-    },
-    {
-      "name": "main div:nth-of-type(2):hover",
-      "type": "custom",
-      "style": "--dynamic-time-one: 0.3s; --dynamic-time-two: 0.38s;"
     },
     {
       "name": "@keyframes shrink",

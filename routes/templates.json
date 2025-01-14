@@ -280,6 +280,13 @@
                         ]
                     }
                 ]
+            },
+            {
+                "element": "script",
+                "attributes": {
+                    "src": "../static/scripts/about.js",
+                    "type": "module"
+                }
             }
         ]
     }
