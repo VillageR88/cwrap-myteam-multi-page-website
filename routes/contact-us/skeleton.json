@@ -17,6 +17,6 @@
     ]
   },
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body(prefix=../)]",
+  "text": "cwrapTemplate[body(prefix=../,omitFooterFirst=cwrapOmit)]",
   "passover": []
 }
