@@ -282,7 +282,7 @@
                 ]
             },
             {
-                "element": "script",
+                "element": "cwrapProperty[omitScript=script]",
                 "attributes": {
                     "src": "../static/scripts/about.js",
                     "type": "module"

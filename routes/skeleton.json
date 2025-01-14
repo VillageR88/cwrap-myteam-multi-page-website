@@ -5,11 +5,15 @@
         "rel": "shortcut icon",
         "href": "favicon.ico",
         "type": "image/x-icon"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./about"
       }
     ]
   },
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body]",
+  "text": "cwrapTemplate[body(omitScript=cwrapOmit)]",
   "passover": [
     {
       "element": "div",

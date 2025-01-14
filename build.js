@@ -109,6 +109,25 @@ function createElementFromJson(
 
   let isFragment = false;
   if (jsonObjCopy.element === "cwrap-fragment") isFragment = true;
+
+  if (jsonObjCopy.element.includes("cwrapProperty")) {
+    const parts = jsonObjCopy.element.split(/(cwrapProperty\[[^\]]+\])/g);
+    let finalElement = "";
+
+    for (const part of parts) {
+      if (part.startsWith("cwrapProperty")) {
+        const propertyMatch = part.match(/cwrapProperty\[([^\]=]+)=([^\]]+)\]/);
+        if (propertyMatch) {
+          const [property, defaultValue] = propertyMatch.slice(1);
+          const mapValue = properties?.get(property);
+          finalElement += mapValue || defaultValue;
+        }
+      } else {
+        finalElement += part;
+      }
+    }
+    jsonObjCopy.element = finalElement;
+  }
   if (isFragment) {
     const fragment = document.createDocumentFragment();
     for (const child of jsonObjCopy.children) {
