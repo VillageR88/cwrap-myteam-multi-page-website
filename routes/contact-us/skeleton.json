@@ -1,0 +1,22 @@
+{
+  "head": {
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "../favicon.ico",
+        "type": "image/x-icon"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../about"
+      }
+    ]
+  },
+  "element": "cwrap-template",
+  "text": "cwrapTemplate[body(prefix=../)]",
+  "passover": []
+}
