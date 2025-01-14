@@ -69,7 +69,7 @@ liveReloadServer.watcher.on("change", (filePath) => {
         <body>
           <h1>Build Error</h1>
           <p>Sorry, something went wrong during the build process. Please try again later.</p>
-          <pre>${err.stderr ? err.stderr.toString() : err.message}</pre>
+          <pre>${err.message}\n${err.stack}</pre>
         </body>
         </html>
       `;

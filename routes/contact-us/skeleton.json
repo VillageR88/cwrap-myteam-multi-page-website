@@ -17,6 +17,82 @@
     ]
   },
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body(prefix=../)]",
-  "passover": []
+  "text": "cwrapTemplate[body(prefix=../,omitFooterFirst=cwrapOmit)]",
+  "passover": [
+    {
+      "element": "div",
+      "style": "background-color: #014E56;",
+      "children": [
+        {
+          "element": "div",
+          "style": "align-items: center; display: flex; margin-bottom: 120px; margin-inline: auto; max-width: 1110px; min-height: 156px; position: relative; width: 100%;",
+          "children": [
+            {
+              "element": "div",
+              "style": "display: flex-direction: column; gap: 16px; max-width: 540px; position: relative; width: 100%;",
+              "children": [
+                {
+                  "element": "h1",
+                  "style": "font-size: 64px; max-width: 350px; width: 100%;",
+                  "text": "Contact"
+                },
+                {
+                  "element": "div",
+                  "style": "display: flex; flex-direction: column; gap: 32px;",
+                  "children": [
+                    {
+                      "element": "h2",
+                      "style": "color: #F67E7E; font-size: 32px; font-weight: bold; letter-spacing: 0; line-height: 48px;",
+                      "text": "Ask us about"
+                    },
+                    {
+                      "element": "ul",
+                      "style": "box-sizing: border-box; display: flex; flex-direction: column; gap: 8px; list-style: none; margin: 0; padding: 0;",
+                      "blueprint": {
+                        "count": "3",
+                        "element": "li",
+                        "style": "align-items: center; display: flex; gap: 23px;",
+                        "children": [
+                          {
+                            "element": "img",
+                            "style": "display: flex; height: 72px; object-fit: contain; width: 72px;",
+                            "attributes": {
+                              "src": "../cwrapGlobal[home.buildNManage.features.cwrapIndex.image]"
+                            }
+                          },
+                          {
+                            "element": "p",
+                            "style": "color: white; font-size: 18px; font-weight: bold; line-height: 28px;",
+                            "text": "cwrapArray[The quality of our talent network,Usage & implementation of our software,How we help drive innovation]"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "div",
+              "style": "display: flex; flex-direction: column; gap: 40px; justify-content: space-between; max-width: 540px; width: 100%;",
+              "children": [
+                {
+                  "element": "div",
+                  "style": "background-color: #F67E7E; height: 4px; width: 50px;"
+                },
+                {
+                  "element": "p",
+                  "style": "color: white;",
+                  "attributes": {
+                    "class": "text-description-size1"
+                  },
+                  "text": "cwrapGlobal[about.hero.description]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
