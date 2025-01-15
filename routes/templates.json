@@ -75,6 +75,10 @@
             {
                 "query": "max-width: 1200px",
                 "style": "font-size: 18px;"
+            },
+            {
+                "query": "max-width: 768px",
+                "style": "cwrapProperty[contactUS768=cwrapOmit]"
             }
         ],
         "style": "cwrapProperty[customStyle=color: white; border: 2px solid white;]; align-items: center; border-radius: 24px; display: flex; justify-content: center; max-width: 153px; min-height: 48px; text-decoration: none; transition: 300ms; width: 100%;",
@@ -151,8 +155,40 @@
     {
         "element": "body",
         "name": "body",
+        "extend": [
+            {
+                "extension": ":has(nav > div > label > input:checked)",
+                "style": "overflow-y: clip;"
+            }
+        ],
         "style": "background-color: #014E56; box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Livvic', serif; margin: 0; min-height: 100dvh; padding: 0;",
         "children": [
+            {
+                "element": "div",
+                "extend": [
+                    {
+                        "extension": ":has(+ nav > div > label > input:checked)",
+                        "style": "display: flex;"
+                    }
+                ],
+                "style": "position: absolute; display: none; justify-content: end; overflow-x: clip; background-color: rgba(0,0,0,0.5); width: 100%; height: 100%; z-index: 2;",
+                "children": [
+                    {
+                        "element": "div",
+                        "style": "max-width: 255px; width: 100%; background-color: #2C6269;",
+                        "children": [
+                            {
+                                "element": "img",
+                                "style": "bottom: 0; position: absolute; right: -100px;",
+                                "attributes": {
+                                    "alt": "background pattern",
+                                    "src": "cwrapProperty[prefix=./]static/images/bg-pattern-about-1-mobile-nav-1.svg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
             {
                 "element": "nav",
                 "style": "background-color: #014E56; display: flex; width: 100%;",
@@ -183,7 +219,26 @@
                             },
                             {
                                 "element": "cwrap-template",
-                                "text": "cwrapTemplate[contactUsLink]"
+                                "text": "cwrapTemplate[contactUsLink(contactUS768=display: none;)]"
+                            },
+                            {
+                                "element": "label",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 768px",
+                                        "style": "display: flex;"
+                                    }
+                                ],
+                                "style": "width: 20px; height: 20px; z-index: 2; display: none;",
+                                "children": [
+                                    {
+                                        "element": "input",
+                                        "attributes": {
+                                            "id": "nav-button",
+                                            "type": "checkbox"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -237,7 +292,7 @@
                                                         "style": "left: 0; top:unset; bottom: -22px;"
                                                     }
                                                 ],
-                                                "style": "align-items: center; left: calc(-200px - 63px); position: absolute; top: -15px;",
+                                                "style": "align-items: center; left: calc(-200px - 63px); position: absolute; pointer-events: none; top: -15px;",
                                                 "attributes": {
                                                     "alt": "background pattern",
                                                     "src": "cwrapProperty[prefix=./]static/images/bg-pattern-home-6-about-5.svg"
