@@ -90,13 +90,27 @@
           "mediaQueries": [
             {
               "query": "max-width: 1200px",
-              "style": "align-items: center; box-sizing: border-box; flex-direction: column; gap: 90px; padding-inline: 24px;"
+              "style": "align-items: center; box-sizing: border-box; flex-direction: column; gap: 90px; padding-inline: 120px;"
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "margin-bottom: 88px; padding-inline: 24px;"
             }
           ],
           "style": "align-items: start; display: flex; justify-content: space-between; margin-bottom: 120px; margin-inline: auto; max-width: 1110px; min-height: 156px; position: relative; width: 100%;",
           "children": [
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "left: -120px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "display: none;"
+                }
+              ],
               "style": "left: calc(-200px - 65px); position: absolute; top: 0px;",
               "attributes": {
                 "alt": "background pattern",
@@ -105,6 +119,16 @@
             },
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "right: -100px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "bottom: -200px;"
+                }
+              ],
               "style": "bottom: -120px; position: absolute; right: calc(-200px - 63px);",
               "attributes": {
                 "alt": "background pattern",
@@ -113,10 +137,22 @@
             },
             {
               "element": "div",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "align-items: center; text-align: center;"
+                }
+              ],
               "style": "display: flex; flex-direction: column; gap: 16px; max-width: 540px; position: relative; width: 100%;",
               "children": [
                 {
                   "element": "h1",
+                  "mediaQueries": [
+                    {
+                      "query": "max-width: 768px",
+                      "style": "font-size: 40px; line-height: 40px;"
+                    }
+                  ],
                   "style": "font-size: 64px; max-width: 350px; width: 100%;",
                   "text": "Contact"
                 },
