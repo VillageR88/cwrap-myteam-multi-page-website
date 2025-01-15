@@ -16,6 +16,68 @@
       }
     ]
   },
+  "classroom": [
+    {
+      "name": "placeholder",
+      "type": "pseudo::",
+      "style": "color: #FFFFFF; opacity: 0.6;"
+    },
+    {
+      "name": ":has(input:user-invalid) ::placeholder",
+      "type": "custom",
+      "style": "color: #F67E7E; opacity: 0.6;"
+    },
+    {
+      "name": "input:-webkit-autofill",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px #014E56 inset; -webkit-text-fill-color: white;"
+    },
+    {
+      "name": "input:-webkit-autofill:hover",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px #014E56 inset; -webkit-text-fill-color: white;"
+    },
+    {
+      "name": "input:-webkit-autofill:focus",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px #014E56 inset; -webkit-text-fill-color: white;"
+    },
+    {
+      "name": "input:-webkit-autofill:active",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px #014E56 inset; -webkit-text-fill-color: white;"
+    },
+    {
+      "name": "input::-webkit-autofill",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px #014E56 inset; -webkit-text-fill-color: white; transition: background-color 500s ease-in-out 0s;"
+    },
+    {
+      "name": "input::-webkit-autofill:hover",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px #014E56 inset; -webkit-text-fill-color: white; transition: background-color 500s ease-in-out 0s;"
+    },
+    {
+      "name": "input::-webkit-autofill:focus",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px #014E56 inset; -webkit-text-fill-color: white; transition: background-color 500s ease-in-out 0s;"
+    },
+    {
+      "name": "input::-webkit-autofill:active",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px #014E56 inset; -webkit-text-fill-color: white; transition: background-color 500s ease-in-out 0s;"
+    },
+    {
+      "name": "input::before",
+      "type": "element",
+      "style": "background-color: #014E56; content: ''; display: block; height: 100%; opacity: 0.6; width: 100%;"
+    },
+    {
+      "name": "input::after",
+      "type": "element",
+      "style": "background-color: #014E56; content: ''; display: block; height: 100%; opacity: 0.6; width: 100%;"
+    }
+  ],
   "element": "cwrap-template",
   "text": "cwrapTemplate[body(prefix=../,omitFooterFirst=cwrapOmit)]",
   "passover": [
@@ -25,8 +87,24 @@
       "children": [
         {
           "element": "div",
-          "style": "align-items: center; display: flex; margin-bottom: 120px; margin-inline: auto; max-width: 1110px; min-height: 156px; position: relative; width: 100%;",
+          "style": "align-items: start; display: flex; justify-content: space-between; margin-bottom: 120px; margin-inline: auto; max-width: 1110px; min-height: 156px; position: relative; width: 100%;",
           "children": [
+            {
+              "element": "img",
+              "style": "left: calc(-200px - 65px); position: absolute; top: 0px;",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "../static/images/bg-pattern-about-2-contact-1.svg"
+              }
+            },
+            {
+              "element": "img",
+              "style": "bottom: -120px; position: absolute; right: calc(-200px - 63px);",
+              "attributes": {
+                "alt": "background pattern",
+                "src": "../static/images/bg-pattern-contact-2.svg"
+              }
+            },
             {
               "element": "div",
               "style": "display: flex-direction: column; gap: 16px; max-width: 540px; position: relative; width: 100%;",
@@ -73,20 +151,52 @@
               ]
             },
             {
-              "element": "div",
-              "style": "display: flex; flex-direction: column; gap: 40px; justify-content: space-between; max-width: 540px; width: 100%;",
+              "element": "form",
+              "style": "display: flex; flex-direction: column; max-width: 540px; width: 100%;",
               "children": [
                 {
-                  "element": "div",
-                  "style": "background-color: #F67E7E; height: 4px; width: 50px;"
+                  "element": "ul",
+                  "style": "box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; list-style: none; margin: 0; margin-top: -40px; padding: 0; width: 100%;",
+                  "blueprint": {
+                    "count": "5",
+                    "element": "li",
+                    "children": [
+                      {
+                        "element": "cwrapArray[input,input,input,input,textarea]",
+                        "attributes": {
+                          "id": "cwrapArray[name,email,company name,title,message]",
+                          "name": "cwrapArray[name,email,company name,title,message]",
+                          "type": "text",
+                          "autocomplete": "cwrapArray[name,email,company,title,message]",
+                          "placeholder": "cwrapArray[Name,Email Address,Company Name,Title,Message]",
+                          "required": "cwrapArray[,,,,,]",
+                          "pattern": "cwrapArray[cwrapGlobal[patterns.patternName] cwrapBreak cwrapGlobal[patterns.patternEmail] cwrapBreak cwrapOmit cwrapBreak cwrapOmit cwrapBreak cwrapOmit]"
+                        },
+                        "extend": [
+                          {
+                            "extension": ":focus",
+                            "style": "border-bottom: 1px solid #79C8C7;"
+                          },
+                          {
+                            "extension": ":user-invalid",
+                            "style": "border-bottom: 1px solid #F67E7E; color: #F67E7E;"
+                          }
+                        ],
+                        "style": "background-color: inherit; border: none; border-bottom: 1px solid white; box-sizing: border-box; color: white; display: flex; font-family: Livvic, serif; font-size: 15px; font-weight: 600; letter-spacing: -0.12px; line-height: 25px; margin-top: cwrapArray[cwrapOmit,cwrapOmit,cwrapOmit,cwrapOmit,18px]; min-height: cwrapArray[60,60,60,60,90]px; outline: none; padding-inline: 14px; resize: none; transition: 300ms; width: 100%;"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "element": "p",
-                  "style": "color: white;",
-                  "attributes": {
-                    "class": "text-description-size1"
-                  },
-                  "text": "cwrapGlobal[about.hero.description]"
+                  "element": "button",
+                  "extend": [
+                    {
+                      "extension": ":hover",
+                      "style": "background-color: #79C8C7;"
+                    }
+                  ],
+                  "style": "border: none; border-radius: 24px; box-sizing: border-box; color: #004047; cursor: pointer; font-family: Livvic, serif; font-size: 18px; font-weight: 600; line-height: 28px; margin-top: 24px; max-width: 123px; min-height: 48px; transition: 300ms; width: 100%;",
+                  "text": "submit"
                 }
               ]
             }

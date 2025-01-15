@@ -17,7 +17,11 @@ function sortStyles(obj) {
           .split(";")
           .filter(Boolean)
           .map((style) => style.trim().replace(/\s*:\s*/g, ": "))
-          .sort((a, b) => a.localeCompare(b));
+          .sort((a, b) => {
+            const [aKey] = a.split(":");
+            const [bKey] = b.split(":");
+            return aKey.localeCompare(bKey) || a.localeCompare(b);
+          });
         obj[key] = `${styles.join("; ")};`;
       }
     } else if (typeof obj[key] === "object") {

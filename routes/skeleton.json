@@ -216,7 +216,7 @@
                   },
                   {
                     "element": "img",
-                    "style": "border-radius: 50%; border: 2px solid #C4FFFE; height: 62px; margin-top: 32px; width: 62px;",
+                    "style": "border: 2px solid #C4FFFE; border-radius: 50%; height: 62px; margin-top: 32px; width: 62px;",
                     "attributes": {
                       "src": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.avatar]",
                       "alt": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.author]"

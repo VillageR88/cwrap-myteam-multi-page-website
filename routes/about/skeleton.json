@@ -137,7 +137,7 @@
                     "children": [
                       {
                         "element": "img",
-                        "style": "border-radius: 50%; border: 2px solid #C4FFFE; height: 96px; margin-top: 32px; width: 96px;",
+                        "style": "border: 2px solid #C4FFFE; border-radius: 50%; height: 96px; margin-top: 32px; width: 96px;",
                         "attributes": {
                           "src": "../cwrapGlobal[about.meetDirectors.directors.cwrapIndex.avatar]"
                         }
@@ -220,7 +220,7 @@
                         "style": "transform: rotate(45deg);"
                       }
                     ],
-                    "style": "align-items: center; background-color: #F67E7E; border-radius: 50%; border: none; bottom: -28px; cursor: pointer; display: flex; height: 56px; justify-content: center; left: calc(50% - 56px * 0.5); position: absolute; transition: 300ms; width: 56px; z-index: 1;",
+                    "style": "align-items: center; background-color: #F67E7E; border: none; border-radius: 50%; bottom: -28px; cursor: pointer; display: flex; height: 56px; justify-content: center; left: calc(50% - 56px * 0.5); position: absolute; transition: 300ms; width: 56px; z-index: 1;",
                     "children": [
                       {
                         "element": "input",
