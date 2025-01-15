@@ -237,7 +237,7 @@
                                                         "style": "left: 0; top:unset; bottom: -22px;"
                                                     }
                                                 ],
-                                                "style": "align-items: center; left: calc(-200px - 63px); position: absolute; top: -17px;",
+                                                "style": "align-items: center; left: calc(-200px - 63px); position: absolute; top: -15px;",
                                                 "attributes": {
                                                     "alt": "background pattern",
                                                     "src": "cwrapProperty[prefix=./]static/images/bg-pattern-home-6-about-5.svg"
@@ -266,6 +266,10 @@
                                             {
                                                 "query": "max-width: 1200px",
                                                 "style": "flex-direction: column; padding-block: 56px;"
+                                            },
+                                            {
+                                                "query": "max-width: 640px",
+                                                "style": "gap: 40px; padding-block: 66px;"
                                             }
                                         ],
                                         "style": "display: flex; justify-content: space-between; gap: 32px; max-width: 1110px; width: 100%; padding-inline: 40px;  padding-block: 48px;",
@@ -276,6 +280,10 @@
                                                     {
                                                         "query": "max-width: 1200px",
                                                         "style": "width: 100%; display: flex; justify-content: space-between;"
+                                                    },
+                                                    {
+                                                        "query": "max-width: 640px",
+                                                        "style": "flex-direction: column; gap: 24px;"
                                                     }
                                                 ],
                                                 "style": "display: flex; gap: 125px;",
@@ -286,6 +294,10 @@
                                                             {
                                                                 "query": "max-width: 1200px",
                                                                 "style": "justify-content: space-between;"
+                                                            },
+                                                            {
+                                                                "query": "max-width: 640px",
+                                                                "style": "align-items: center;"
                                                             }
                                                         ],
                                                         "style": "display: flex; flex-direction: column; gap: 25px;",
@@ -306,6 +318,10 @@
                                                             {
                                                                 "query": "max-width: 1200px",
                                                                 "style": "text-align: end;"
+                                                            },
+                                                            {
+                                                                "query": "max-width: 640px",
+                                                                "style": "text-align: center;"
                                                             }
                                                         ],
                                                         "style": "color: white; display: flex; flex-direction: column; opacity: 0.6;",
@@ -323,6 +339,10 @@
                                                     {
                                                         "query": "max-width: 1200px",
                                                         "style": "flex-direction: row;"
+                                                    },
+                                                    {
+                                                        "query": "max-width: 640px",
+                                                        "style": "flex-direction: column; align-items: center; gap: 16px;"
                                                     }
                                                 ],
                                                 "style": "align-items: end; display: flex; flex-direction: column; justify-content: space-between;",

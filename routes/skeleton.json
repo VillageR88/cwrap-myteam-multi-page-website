@@ -119,6 +119,10 @@
             {
               "query": "max-width: 1200px",
               "style": "flex-direction: column; margin-block: 100px; max-width: 573px; padding-inline: 40px;"
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "box-sizing: border-box;"
             }
           ],
           "style": "display: flex; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; min-height: 404px; position: relative; width: 100%;",
@@ -129,6 +133,10 @@
                 {
                   "query": "max-width: 1200px",
                   "style": "bottom: unset; right: -158px; top: -100px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "right: -100px;"
                 }
               ],
               "style": "bottom: -140px; position: absolute; right: calc(-65px - 200px);",
@@ -153,6 +161,12 @@
                 },
                 {
                   "element": "h2",
+                  "mediaQueries": [
+                    {
+                      "query": "max-width: 768px",
+                      "style": "margin-right: 100px;"
+                    }
+                  ],
                   "style": "color: white;",
                   "text": "cwrapGlobal[home.buildNManage.h2Title]"
                 }
@@ -170,6 +184,12 @@
               "blueprint": {
                 "count": "3",
                 "element": "li",
+                "mediaQueries": [
+                  {
+                    "query": "max-width: 768px",
+                    "style": "align-items: center; flex-direction: column; text-align: center;"
+                  }
+                ],
                 "style": "align-items: start; display: flex; gap: 23px;",
                 "children": [
                   {

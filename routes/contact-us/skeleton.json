@@ -87,6 +87,12 @@
       "children": [
         {
           "element": "div",
+          "mediaQueries": [
+            {
+              "query": "max-width: 1200px",
+              "style": "align-items: center; box-sizing: border-box; flex-direction: column; gap: 90px; padding-inline: 24px;"
+            }
+          ],
           "style": "align-items: start; display: flex; justify-content: space-between; margin-bottom: 120px; margin-inline: auto; max-width: 1110px; min-height: 156px; position: relative; width: 100%;",
           "children": [
             {
@@ -107,7 +113,7 @@
             },
             {
               "element": "div",
-              "style": "display: flex-direction: column; gap: 16px; max-width: 540px; position: relative; width: 100%;",
+              "style": "display: flex; flex-direction: column; gap: 16px; max-width: 540px; position: relative; width: 100%;",
               "children": [
                 {
                   "element": "h1",
