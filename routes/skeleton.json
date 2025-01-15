@@ -214,6 +214,12 @@
       "children": [
         {
           "element": "div",
+          "mediaQueries": [
+            {
+              "query": "max-width: 1200px",
+              "style": "gap: 48px;"
+            }
+          ],
           "style": "align-items: center; box-sizing: border-box; display: flex; flex-direction: column; gap: 56px; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; position: relative; text-align: center; width: 100%;",
           "children": [
             {
@@ -246,6 +252,12 @@
             },
             {
               "element": "h2",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "max-width: 480px; white-space: unset;"
+                }
+              ],
               "style": "color: white; max-width: 932px; white-space: pre-wrap;",
               "text": "cwrapGlobal[home.deliveringReal.h2Title] cwrapSpan",
               "children": [
@@ -258,10 +270,22 @@
             },
             {
               "element": "ul",
-              "style": "align-items: center; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; list-style: none; margin: 0; padding: 0; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "gap: 48px;"
+                }
+              ],
+              "style": "align-items: center; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; list-style: none; margin: 0; padding: 0; width: 100%;",
               "blueprint": {
                 "count": "3",
                 "element": "li",
+                "mediaQueries": [
+                  {
+                    "query": "max-width: 1200px",
+                    "style": "max-width: 573px;"
+                  }
+                ],
                 "style": "align-items: center; box-sizing: border-box; display: flex; flex-direction: column; max-width: 350px; width: 100%;",
                 "children": [
                   {
@@ -288,6 +312,12 @@
                   },
                   {
                     "element": "img",
+                    "mediaQueries": [
+                      {
+                        "query": "max-width: 1200px",
+                        "style": "margin-top: 16px;"
+                      }
+                    ],
                     "style": "border: 2px solid #C4FFFE; border-radius: 50%; height: 62px; margin-top: 32px; width: 62px;",
                     "attributes": {
                       "src": "cwrapGlobal[home.deliveringReal.stories.cwrapIndex.avatar]",

@@ -2,7 +2,13 @@
     {
         "element": "img",
         "name": "logo",
-        "style": "display: flex; width: fit-content; height: fit-content;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 1200px",
+                "style": "cwrapProperty[logo1200Style=width: 96px; height: 24px;]"
+            }
+        ],
+        "style": "display: flex; width: fit-content; height: fit-content; margin-bottom: -4px;",
         "attributes": {
             "alt": "My team logo",
             "src": "cwrapProperty[prefix=./]static/images/logo.svg"
@@ -11,6 +17,16 @@
     {
         "element": "ul",
         "name": "ulPartialNavigation",
+        "mediaQueries": [
+            {
+                "query": "max-width: 1200px",
+                "style": "cwrapProperty[1200PartialGap=cwrapOmit];"
+            },
+            {
+                "query": "max-width: 768px",
+                "style": "cwrapProperty[768Partial=cwrapOmit];"
+            }
+        ],
         "style": "align-items: center; box-sizing: border-box; display: flex; gap: 40px; list-style: none; margin: 0; padding: 0;",
         "blueprint": {
             "count": "2",
@@ -32,7 +48,7 @@
                     "mediaQueries": [
                         {
                             "query": "max-width: 1200px",
-                            "style": "font-size: 18px;"
+                            "style": "cwrapProperty[1200PartialLink=font-size: 18px;]"
                         }
                     ],
                     "style": "color: white; text-decoration: none; transition: 300ms; font-weight: 600;",
@@ -53,6 +69,12 @@
             {
                 "extension": ":hover",
                 "style": "cwrapProperty[customStyleHover=color: #002529; background-color: #FFFFFF;]"
+            }
+        ],
+        "mediaQueries": [
+            {
+                "query": "max-width: 1200px",
+                "style": "font-size: 18px;"
             }
         ],
         "style": "cwrapProperty[customStyle=color: white; border: 2px solid white;]; align-items: center; border-radius: 24px; display: flex; justify-content: center; max-width: 153px; min-height: 48px; text-decoration: none; transition: 300ms; width: 100%;",
@@ -133,23 +155,29 @@
         "children": [
             {
                 "element": "nav",
-                "style": "background-color: #014E56; display: flex; min-height: 241px; width: 100%;",
+                "style": "background-color: #014E56; display: flex; width: 100%;",
                 "children": [
                     {
                         "element": "div",
-                        "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px auto; margin-inline: auto; max-width: 1110px; width: 100%; padding-inline: 40px;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 1200px",
+                                "style": "margin-block: 64px;"
+                            }
+                        ],
+                        "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px ; margin-inline: auto; max-width: 1110px; width: 100%; padding-inline: 40px;",
                         "children": [
                             {
                                 "element": "div",
-                                "style": "display: flex; gap: 80px;",
+                                "style": "display: flex; gap: 80px; align-items: center;",
                                 "children": [
                                     {
                                         "element": "cwrap-template",
-                                        "text": "cwrapTemplate[logo]"
+                                        "text": "cwrapTemplate[logo(logo1200Style=width: 128px; height: 32px;)]"
                                     },
                                     {
                                         "element": "cwrap-template",
-                                        "text": "cwrapTemplate[ulPartialNavigation]"
+                                        "text": "cwrapTemplate[ulPartialNavigation(768Partial=display: none;)]"
                                     }
                                 ]
                             },
@@ -179,6 +207,12 @@
                         "children": [
                             {
                                 "element": "cwrapProperty[omitFooterFirst=div]",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 768px",
+                                        "style": "padding-block: 83px;"
+                                    }
+                                ],
                                 "style": "background-color: #F67E7E; padding-block: 76px; position: relative;",
                                 "children": [
                                     {
@@ -187,9 +221,13 @@
                                             {
                                                 "query": "max-width: 1200px",
                                                 "style": "padding-inline: 98px; box-sizing: border-box; display: flex; align-items: center; position: unset;"
+                                            },
+                                            {
+                                                "query": "max-width: 768px",
+                                                "style": "flex-direction: column; text-align: center;"
                                             }
                                         ],
-                                        "style": "display: flex; justify-content: space-between; margin-inline: auto; max-width: 917px; min-height: 48px; position: relative; width: 100%;",
+                                        "style": "display: flex; justify-content: space-between; gap: 24px; margin-inline: auto; max-width: 917px; min-height: 48px; position: relative; width: 100%;",
                                         "children": [
                                             {
                                                 "element": "img",
@@ -220,18 +258,36 @@
                             },
                             {
                                 "element": "div",
-                                "style": "background-color: #002529; display: flex; align-items: center; justify-content: center; margin-inline: auto; min-height: 100px; position: relative; width: 100%;",
+                                "style": "background-color: #002529; display: flex; align-items: center; justify-content: center; margin-inline: auto; box-sizing: border-box; position: relative; width: 100%;",
                                 "children": [
                                     {
                                         "element": "div",
-                                        "style": "display: flex; justify-content: space-between; max-width: 1110px; width: 100%;margin-block: 48px; padding-inline: 40px;",
+                                        "mediaQueries": [
+                                            {
+                                                "query": "max-width: 1200px",
+                                                "style": "flex-direction: column; padding-block: 56px;"
+                                            }
+                                        ],
+                                        "style": "display: flex; justify-content: space-between; gap: 32px; max-width: 1110px; width: 100%; padding-inline: 40px;  padding-block: 48px;",
                                         "children": [
                                             {
                                                 "element": "div",
+                                                "mediaQueries": [
+                                                    {
+                                                        "query": "max-width: 1200px",
+                                                        "style": "width: 100%; display: flex; justify-content: space-between;"
+                                                    }
+                                                ],
                                                 "style": "display: flex; gap: 125px;",
                                                 "children": [
                                                     {
                                                         "element": "div",
+                                                        "mediaQueries": [
+                                                            {
+                                                                "query": "max-width: 1200px",
+                                                                "style": "justify-content: space-between;"
+                                                            }
+                                                        ],
                                                         "style": "display: flex; flex-direction: column; gap: 25px;",
                                                         "children": [
                                                             {
@@ -240,12 +296,18 @@
                                                             },
                                                             {
                                                                 "element": "cwrap-template",
-                                                                "text": "cwrapTemplate[ulPartialNavigation]"
+                                                                "text": "cwrapTemplate[ulPartialNavigation(1200PartialGap=gap: 24px,1200PartialLink=font-size: 15px;)]"
                                                             }
                                                         ]
                                                     },
                                                     {
                                                         "element": "div",
+                                                        "mediaQueries": [
+                                                            {
+                                                                "query": "max-width: 1200px",
+                                                                "style": "text-align: end;"
+                                                            }
+                                                        ],
                                                         "style": "color: white; display: flex; flex-direction: column; opacity: 0.6;",
                                                         "blueprint": {
                                                             "count": "4",
@@ -257,6 +319,12 @@
                                             },
                                             {
                                                 "element": "div",
+                                                "mediaQueries": [
+                                                    {
+                                                        "query": "max-width: 1200px",
+                                                        "style": "flex-direction: row;"
+                                                    }
+                                                ],
                                                 "style": "align-items: end; display: flex; flex-direction: column; justify-content: space-between;",
                                                 "children": [
                                                     {
