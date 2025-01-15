@@ -219,7 +219,7 @@
                                         "element": "div",
                                         "mediaQueries": [
                                             {
-                                                "query": "max-width: 1200px",
+                                                "query": "max-width: 1110px",
                                                 "style": "padding-inline: 98px; box-sizing: border-box; display: flex; align-items: center; position: unset;"
                                             },
                                             {
@@ -233,7 +233,7 @@
                                                 "element": "img",
                                                 "mediaQueries": [
                                                     {
-                                                        "query": "max-width: 1200px",
+                                                        "query": "max-width: 1110px",
                                                         "style": "left: 0; top:unset; bottom: -22px;"
                                                     }
                                                 ],
@@ -264,7 +264,7 @@
                                         "element": "div",
                                         "mediaQueries": [
                                             {
-                                                "query": "max-width: 1200px",
+                                                "query": "max-width: 1110px",
                                                 "style": "flex-direction: column; padding-block: 56px;"
                                             },
                                             {
@@ -278,7 +278,7 @@
                                                 "element": "div",
                                                 "mediaQueries": [
                                                     {
-                                                        "query": "max-width: 1200px",
+                                                        "query": "max-width: 1110px",
                                                         "style": "width: 100%; display: flex; justify-content: space-between;"
                                                     },
                                                     {
@@ -292,7 +292,7 @@
                                                         "element": "div",
                                                         "mediaQueries": [
                                                             {
-                                                                "query": "max-width: 1200px",
+                                                                "query": "max-width: 1110px",
                                                                 "style": "justify-content: space-between;"
                                                             },
                                                             {
@@ -316,7 +316,7 @@
                                                         "element": "div",
                                                         "mediaQueries": [
                                                             {
-                                                                "query": "max-width: 1200px",
+                                                                "query": "max-width: 1110px",
                                                                 "style": "text-align: end;"
                                                             },
                                                             {
@@ -337,7 +337,7 @@
                                                 "element": "div",
                                                 "mediaQueries": [
                                                     {
-                                                        "query": "max-width: 1200px",
+                                                        "query": "max-width: 1110px",
                                                         "style": "flex-direction: row;"
                                                     },
                                                     {
