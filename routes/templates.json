@@ -155,10 +155,15 @@
     {
         "element": "body",
         "name": "body",
-        "extend": [
+        "mediaQueries": [
             {
-                "extension": ":has(nav > div > label > input:checked)",
-                "style": "overflow-y: clip;"
+                "query": "max-width: 768px",
+                "extend": [
+                    {
+                        "extension": ":has(nav > div > label > input:checked)",
+                        "style": "overflow-y: clip;"
+                    }
+                ]
             }
         ],
         "style": "background-color: #014E56; box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Livvic', serif; margin: 0; min-height: 100dvh; padding: 0;",
@@ -171,20 +176,38 @@
                         "extend": [
                             {
                                 "extension": ":has(+ nav > div > label > input:checked)",
-                                "style": "display: flex;"
+                                "style": "opacity: 1; pointer-events: auto; user-select: auto;"
+                            },
+                            {
+                                "extension": ":has(+ nav > div > label > input:checked) > div",
+                                "style": "transform: translateX(0%);"
                             }
                         ]
                     }
                 ],
-                "style": "position: absolute; display: none; justify-content: end; overflow-x: clip; background-color: rgba(0,0,0,0.5); width: 100%; height: 100%; z-index: 2;",
+                "style": "transition: opacity 500ms; position: absolute; pointer-events: none; display: flex; user-select: none; opacity: 0; justify-content: end; overflow-x: clip; background-color: rgba(0,0,0,0.5); width: 100%; height: 100%; z-index: 2;",
                 "children": [
                     {
                         "element": "div",
-                        "style": "max-width: 255px; width: 100%; background-color: #2C6269;",
+                        "style": "transition: 500ms; max-width: 255px; width: 100%; gap: 24px; background-color: #2C6269; display: flex; flex-direction: column; overflow-y: auto; overflow-x: clip; justify-content: space-between; transform: translateX(100%);",
                         "children": [
                             {
+                                "element": "div",
+                                "style": "margin-top: 112px; margin-inline: 48px; display: flex; flex-direction: column; min-height: 200px;",
+                                "children": [
+                                    {
+                                        "element": "cwrap-template",
+                                        "text": "cwrapTemplate[ulPartialNavigation(768Partial=flex-direction: column; align-items: start; gap: 24px;)]"
+                                    },
+                                    {
+                                        "element": "cwrap-template",
+                                        "text": "cwrapTemplate[contactUsLink(contactUS768=margin-top: 36px;)]"
+                                    }
+                                ]
+                            },
+                            {
                                 "element": "img",
-                                "style": "bottom: 0; position: absolute; right: -100px;",
+                                "style": "width: 200px; height: 200px; align-self: end; margin-right: -100px;",
                                 "attributes": {
                                     "alt": "background pattern",
                                     "src": "cwrapProperty[prefix=./]static/images/bg-pattern-about-1-mobile-nav-1.svg"
@@ -206,7 +229,7 @@
                                 "style": "margin-block: 64px;"
                             }
                         ],
-                        "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px ; margin-inline: auto; max-width: 1110px; width: 100%; padding-inline: 40px;",
+                        "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px; margin-inline: auto; max-width: 1110px; width: 100%; padding-inline: 40px;",
                         "children": [
                             {
                                 "element": "div",
@@ -234,12 +257,39 @@
                                         "style": "display: flex;"
                                     }
                                 ],
+                                "extend": [
+                                    {
+                                        "extension": ":has(input:checked) > img:nth-of-type(1)",
+                                        "style": "opacity: 0;"
+                                    }
+                                ],
                                 "style": "width: 20px; height: 20px; z-index: 2; display: none;",
                                 "children": [
                                     {
-                                        "element": "input",
+                                        "element": "img",
+                                        "style": "position: absolute;",
                                         "attributes": {
-                                            "id": "nav-button",
+                                            "src": "cwrapProperty[prefix=./]static/images/icon-hamburger.svg"
+                                        }
+                                    },
+                                    {
+                                        "element": "img",
+                                        "extend": [
+                                            {
+                                                "extension": ":has(+ input:checked)",
+                                                "style": "opacity: 1;"
+                                            }
+                                        ],
+                                        "style": "position: absolute; opacity:0;",
+                                        "attributes": {
+                                            "src": "cwrapProperty[prefix=./]static/images/icon-close.svg"
+                                        }
+                                    },
+                                    {
+                                        "element": "input",
+                                        "style": "opacity: 0; width: 0; height: 0;",
+                                        "attributes": {
+                                            "name": "nav-button",
                                             "type": "checkbox"
                                         }
                                     }
