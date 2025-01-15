@@ -85,16 +85,34 @@
     {
       "name": "text-description-size1",
       "type": "class",
+      "mediaQueries": [
+        {
+          "query": "max-width: 1200px",
+          "style": "font-size: 15px;"
+        }
+      ],
       "style": "font-size: 18px; font-weight: 600; line-height: 28px; margin: 0;"
     },
     {
       "name": "h1",
       "type": "element",
+      "mediaQueries": [
+        {
+          "query": "max-width: 1200px",
+          "style": "font-size: 64px; line-height: 56px;"
+        }
+      ],
       "style": "color: white; font-size: 100px; font-weight: bold; line-height: 100px; margin: 0;"
     },
     {
       "name": "h2",
       "type": "element",
+      "mediaQueries": [
+        {
+          "query": "max-width: 1200px",
+          "style": "font-size: 32px; line-height: 32px;"
+        }
+      ],
       "style": "font-size: 48px; font-weight: bold; line-height: 48px; margin: 0;"
     },
     {
@@ -113,7 +131,7 @@
       "hero": {
         "h1Title": "Find the best",
         "h1TitleDistinction": "talent",
-        "description": "Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that."
+        "description": "Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance\nof global talent. We’re about to change that."
       },
       "buildNManage": {
         "h2Title": "Build & manage distributed teams like no one else.",
@@ -136,7 +154,7 @@
         ]
       },
       "deliveringReal": {
-        "h2Title": "Delivering real results for top companies. Some of our",
+        "h2Title": "Delivering real results for top\ncompanies. Some of our",
         "h2TitleDistinction": "success stories.",
         "stories": [
           {

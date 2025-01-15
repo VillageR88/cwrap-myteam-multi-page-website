@@ -25,6 +25,12 @@
           "children": [
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "left: calc(50% - 358px * 0.5); right: unset;"
+                }
+              ],
               "style": "bottom: 0; position: absolute; right: 0;",
               "attributes": {
                 "alt": "background pattern",
@@ -33,6 +39,12 @@
             },
             {
               "element": "div",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "align-items: center; flex-direction: column; text-align: center;"
+                }
+              ],
               "style": "display: flex; gap: 24px; justify-content: space-between; margin-bottom: auto; position: relative; width: 100%;",
               "children": [
                 {
@@ -45,6 +57,12 @@
                 },
                 {
                   "element": "h1",
+                  "mediaQueries": [
+                    {
+                      "query": "max-width: 1200px",
+                      "style": "max-width: 350px;"
+                    }
+                  ],
                   "style": "max-width: 615px; width: 100%;",
                   "text": "cwrapGlobal[home.hero.h1Title] cwrapSpan",
                   "children": [
@@ -57,10 +75,22 @@
                 },
                 {
                   "element": "div",
+                  "mediaQueries": [
+                    {
+                      "query": "max-width: 1200px",
+                      "style": "max-width: 456px; white-space: pre-wrap;"
+                    }
+                  ],
                   "style": "display: flex; flex-direction: column; justify-content: space-between; max-width: 445px; width: 100%;",
                   "children": [
                     {
                       "element": "div",
+                      "mediaQueries": [
+                        {
+                          "query": "max-width: 1200px",
+                          "style": "display: none;"
+                        }
+                      ],
                       "style": "background-color: #79C8C7; height: 4px; width: 50px;"
                     },
                     {
@@ -85,10 +115,22 @@
       "children": [
         {
           "element": "div",
+          "mediaQueries": [
+            {
+              "query": "max-width: 1200px",
+              "style": "flex-direction: column; margin-block: 100px; max-width: 573px; padding-inline: 40px;"
+            }
+          ],
           "style": "display: flex; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; min-height: 404px; position: relative; width: 100%;",
           "children": [
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "bottom: unset; right: -158px; top: -100px;"
+                }
+              ],
               "style": "bottom: -140px; position: absolute; right: calc(-65px - 200px);",
               "attributes": {
                 "alt": "background pattern",
@@ -97,6 +139,12 @@
             },
             {
               "element": "div",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "gap: 32px;"
+                }
+              ],
               "style": "display: flex; flex-direction: column; gap: 54px; max-width: 445px;",
               "children": [
                 {
@@ -112,6 +160,12 @@
             },
             {
               "element": "ul",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "margin: 64px 0 0 0; max-width: unset;"
+                }
+              ],
               "style": "box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; list-style: none; margin: 58px 0 0 0; max-width: 540px; padding: 0px;",
               "blueprint": {
                 "count": "3",
@@ -127,6 +181,12 @@
                   },
                   {
                     "element": "section",
+                    "mediaQueries": [
+                      {
+                        "query": "max-width: 1200px",
+                        "style": "max-width: 478px;"
+                      }
+                    ],
                     "style": "display: flex; flex-direction: column; gap: 16px;",
                     "children": [
                       {
@@ -150,14 +210,20 @@
     },
     {
       "element": "div",
-      "style": "background-color: #004047;",
+      "style": "background-color: #004047; padding-inline: 40px;",
       "children": [
         {
           "element": "div",
-          "style": "align-items: center; display: flex; flex-direction: column; gap: 56px; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; position: relative; text-align: center; width: 100%;",
+          "style": "align-items: center; box-sizing: border-box; display: flex; flex-direction: column; gap: 56px; justify-content: space-between; margin-block: 140px; margin-inline: auto; max-width: 1110px; position: relative; text-align: center; width: 100%;",
           "children": [
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "left: -40px;"
+                }
+              ],
               "style": "left: calc(-147px - 18px); position: absolute; top: -140px;",
               "attributes": {
                 "alt": "background pattern",
@@ -166,6 +232,12 @@
             },
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "right: -40px;"
+                }
+              ],
               "style": "bottom: -140px; position: absolute; right: -165px;",
               "attributes": {
                 "alt": "background pattern",
@@ -174,7 +246,7 @@
             },
             {
               "element": "h2",
-              "style": "color: white; max-width: 932px;",
+              "style": "color: white; max-width: 932px; white-space: pre-wrap;",
               "text": "cwrapGlobal[home.deliveringReal.h2Title] cwrapSpan",
               "children": [
                 {
@@ -186,11 +258,11 @@
             },
             {
               "element": "ul",
-              "style": "box-sizing: border-box; display: flex; gap: 24px; justify-content: space-between; list-style: none; margin: 0; padding: 0; width: 100%;",
+              "style": "align-items: center; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; list-style: none; margin: 0; padding: 0; width: 100%;",
               "blueprint": {
                 "count": "3",
                 "element": "li",
-                "style": "align-items: center; display: flex; flex-direction: column; max-width: 350px; width: 100%;",
+                "style": "align-items: center; box-sizing: border-box; display: flex; flex-direction: column; max-width: 350px; width: 100%;",
                 "children": [
                   {
                     "element": "img",

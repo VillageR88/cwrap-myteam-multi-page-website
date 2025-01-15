@@ -29,7 +29,13 @@
                         "class": "text-description-size1",
                         "href": "cwrapProperty[prefix=./]cwrapArray[,about]"
                     },
-                    "style": "color: white; text-decoration: none; transition: 300ms;",
+                    "mediaQueries": [
+                        {
+                            "query": "max-width: 1200px",
+                            "style": "font-size: 18px;"
+                        }
+                    ],
+                    "style": "color: white; text-decoration: none; transition: 300ms; font-weight: 600;",
                     "text": "cwrapArray[home,about]"
                 }
             ]
@@ -131,7 +137,7 @@
                 "children": [
                     {
                         "element": "div",
-                        "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px auto; margin-inline: auto; max-width: 1110px; width: 100%;",
+                        "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px auto; margin-inline: auto; max-width: 1110px; width: 100%; padding-inline: 40px;",
                         "children": [
                             {
                                 "element": "div",
@@ -170,108 +176,125 @@
                 "children": [
                     {
                         "element": "div",
-                        "style": "background-color: #F67E7E;",
                         "children": [
                             {
                                 "element": "cwrapProperty[omitFooterFirst=div]",
-                                "style": "display: flex; justify-content: space-between; margin-block: 76px; margin-inline: auto; max-width: 917px; min-height: 48px; position: relative; width: 100%;",
-                                "children": [
-                                    {
-                                        "element": "img",
-                                        "style": "align-items: center; left: calc(-200px - 63px); position: absolute; top: -17px;",
-                                        "attributes": {
-                                            "alt": "background pattern",
-                                            "src": "cwrapProperty[prefix=./]static/images/bg-pattern-home-6-about-5.svg"
-                                        }
-                                    },
-                                    {
-                                        "element": "h2",
-                                        "style": "color: #012F34;",
-                                        "text": "Ready to get started?"
-                                    },
-                                    {
-                                        "element": "cwrap-template",
-                                        "text": "cwrapTemplate[contactUsLink(customStyle=color: #012F34; border: 2px solid #012F34;,customStyleHover=color: white; background-color: #012F34; border-color: #012F34;)]"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "element": "div",
-                        "style": "background-color: #002529;",
-                        "children": [
-                            {
-                                "element": "div",
-                                "style": "display: flex; justify-content: space-between; margin-block: 48px; margin-inline: auto; max-width: 1110px; min-height: 100px; position: relative; width: 100%;",
+                                "style": "background-color: #F67E7E; padding-block: 76px; position: relative;",
                                 "children": [
                                     {
                                         "element": "div",
-                                        "style": "display: flex; gap: 125px;",
+                                        "mediaQueries": [
+                                            {
+                                                "query": "max-width: 1200px",
+                                                "style": "padding-inline: 98px; box-sizing: border-box; display: flex; align-items: center; position: unset;"
+                                            }
+                                        ],
+                                        "style": "display: flex; justify-content: space-between; margin-inline: auto; max-width: 917px; min-height: 48px; position: relative; width: 100%;",
+                                        "children": [
+                                            {
+                                                "element": "img",
+                                                "mediaQueries": [
+                                                    {
+                                                        "query": "max-width: 1200px",
+                                                        "style": "left: 0; top:unset; bottom: -22px;"
+                                                    }
+                                                ],
+                                                "style": "align-items: center; left: calc(-200px - 63px); position: absolute; top: -17px;",
+                                                "attributes": {
+                                                    "alt": "background pattern",
+                                                    "src": "cwrapProperty[prefix=./]static/images/bg-pattern-home-6-about-5.svg"
+                                                }
+                                            },
+                                            {
+                                                "element": "h2",
+                                                "style": "color: #012F34;",
+                                                "text": "Ready to get started?"
+                                            },
+                                            {
+                                                "element": "cwrap-template",
+                                                "text": "cwrapTemplate[contactUsLink(customStyle=color: #012F34; border: 2px solid #012F34;,customStyleHover=color: white; background-color: #012F34; border-color: #012F34;)]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "element": "div",
+                                "style": "background-color: #002529; display: flex; align-items: center; justify-content: center; margin-inline: auto; min-height: 100px; position: relative; width: 100%;",
+                                "children": [
+                                    {
+                                        "element": "div",
+                                        "style": "display: flex; justify-content: space-between; max-width: 1110px; width: 100%;margin-block: 48px; padding-inline: 40px;",
                                         "children": [
                                             {
                                                 "element": "div",
-                                                "style": "display: flex; flex-direction: column; gap: 25px;",
+                                                "style": "display: flex; gap: 125px;",
                                                 "children": [
                                                     {
-                                                        "element": "cwrap-template",
-                                                        "text": "cwrapTemplate[logo]"
+                                                        "element": "div",
+                                                        "style": "display: flex; flex-direction: column; gap: 25px;",
+                                                        "children": [
+                                                            {
+                                                                "element": "cwrap-template",
+                                                                "text": "cwrapTemplate[logo]"
+                                                            },
+                                                            {
+                                                                "element": "cwrap-template",
+                                                                "text": "cwrapTemplate[ulPartialNavigation]"
+                                                            }
+                                                        ]
                                                     },
                                                     {
-                                                        "element": "cwrap-template",
-                                                        "text": "cwrapTemplate[ulPartialNavigation]"
+                                                        "element": "div",
+                                                        "style": "color: white; display: flex; flex-direction: column; opacity: 0.6;",
+                                                        "blueprint": {
+                                                            "count": "4",
+                                                            "element": "p",
+                                                            "text": "cwrapArray[987  Hillcrest Lane cwrapBreak Irvine, CA cwrapBreak California 92714 cwrapBreak Call Us : 949-833-7432]"
+                                                        }
                                                     }
                                                 ]
                                             },
                                             {
                                                 "element": "div",
-                                                "style": "color: white; display: flex; flex-direction: column; opacity: 0.6;",
-                                                "blueprint": {
-                                                    "count": "4",
-                                                    "element": "p",
-                                                    "text": "cwrapArray[987  Hillcrest Lane cwrapBreak Irvine, CA cwrapBreak California 92714 cwrapBreak Call Us : 949-833-7432]"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "element": "div",
-                                        "style": "align-items: end; display: flex; flex-direction: column; justify-content: space-between;",
-                                        "children": [
-                                            {
-                                                "element": "ul",
-                                                "style": "align-items: center; display: flex; gap: 16px; list-style: none; margin: 0; padding: 0;",
-                                                "blueprint": {
-                                                    "count": "3",
-                                                    "element": "li",
-                                                    "children": [
-                                                        {
-                                                            "element": "a",
-                                                            "style": "fill: white; transition: 300ms;",
-                                                            "extend": [
-                                                                {
-                                                                    "extension": ":hover",
-                                                                    "style": "fill: #F67E7E;"
-                                                                }
-                                                            ],
-                                                            "attributes": {
-                                                                "href": "#",
-                                                                "aria-label": "Social media link"
-                                                            },
+                                                "style": "align-items: end; display: flex; flex-direction: column; justify-content: space-between;",
+                                                "children": [
+                                                    {
+                                                        "element": "ul",
+                                                        "style": "align-items: center; display: flex; gap: 16px; list-style: none; margin: 0; padding: 0;",
+                                                        "blueprint": {
+                                                            "count": "3",
+                                                            "element": "li",
                                                             "children": [
                                                                 {
-                                                                    "element": "cwrap-template",
-                                                                    "text": "cwrapTemplate[cwrapArray[facebookIcon,pinterestIcon,twitterIcon]]"
+                                                                    "element": "a",
+                                                                    "style": "fill: white; transition: 300ms;",
+                                                                    "extend": [
+                                                                        {
+                                                                            "extension": ":hover",
+                                                                            "style": "fill: #F67E7E;"
+                                                                        }
+                                                                    ],
+                                                                    "attributes": {
+                                                                        "href": "#",
+                                                                        "aria-label": "Social media link"
+                                                                    },
+                                                                    "children": [
+                                                                        {
+                                                                            "element": "cwrap-template",
+                                                                            "text": "cwrapTemplate[cwrapArray[facebookIcon,pinterestIcon,twitterIcon]]"
+                                                                        }
+                                                                    ]
                                                                 }
                                                             ]
                                                         }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "element": "p",
-                                                "style": "color: white; opacity: 0.6;",
-                                                "text": "Copyright 2020. All Rights Reserved"
+                                                    },
+                                                    {
+                                                        "element": "p",
+                                                        "style": "color: white; opacity: 0.6;",
+                                                        "text": "Copyright 2020. All Rights Reserved"
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
