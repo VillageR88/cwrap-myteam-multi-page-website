@@ -452,7 +452,7 @@
                                                     },
                                                     {
                                                         "query": "max-width: 640px",
-                                                        "style": "flex-direction: column; align-items: center; gap: 16px;"
+                                                        "style": "flex-direction: column; align-items: center; gap: 16px; text-align: center;"
                                                     }
                                                 ],
                                                 "style": "align-items: end; display: flex; flex-direction: column; justify-content: space-between;",

@@ -21,14 +21,36 @@
   "passover": [
     {
       "element": "div",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "overflow-y: clip; position: relative;"
+        }
+      ],
       "style": "background-color: #014E56;",
       "children": [
         {
           "element": "div",
+          "mediaQueries": [
+            {
+              "query": "max-width: 768px",
+              "style": "position: unset;"
+            }
+          ],
           "style": "align-items: center; display: flex; margin-bottom: 120px; margin-inline: auto; max-width: 1110px; min-height: 156px; position: relative; width: 100%;",
           "children": [
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "right: -100px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "bottom: -100px;"
+                }
+              ],
               "style": "bottom: -120px; position: absolute; right: calc(-200px - 65px);",
               "attributes": {
                 "alt": "background pattern",
@@ -40,13 +62,19 @@
               "mediaQueries": [
                 {
                   "query": "max-width: 1200px",
-                  "style": "align-items: center; flex-direction: column; padding-inline: 24px; text-align: center;"
+                  "style": "align-items: center; flex-direction: column; margin-inline: auto; max-width: 457px; padding-inline: 24px; text-align: center;"
                 }
               ],
               "style": "display: flex; gap: 24px; justify-content: space-between; margin-bottom: auto; position: relative; width: 100%;",
               "children": [
                 {
                   "element": "h1",
+                  "mediaQueries": [
+                    {
+                      "query": "max-width: 768px",
+                      "style": "font-size: 40px;"
+                    }
+                  ],
                   "style": "font-size: 64px; max-width: 350px; width: 100%;",
                   "text": "cwrapGlobal[about.hero.h1Title]"
                 },
@@ -82,7 +110,13 @@
     },
     {
       "element": "div",
-      "style": "background-color: #004047;",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "overflow-y: clip;"
+        }
+      ],
+      "style": "background-color: #004047; z-index: 1;",
       "children": [
         {
           "element": "div",
@@ -94,6 +128,10 @@
                 {
                   "query": "max-width: 1200px",
                   "style": "left: -100px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "top: -220px;"
                 }
               ],
               "style": "left: calc(-200px - 65px); position: absolute; top: -120px;",
@@ -118,6 +156,12 @@
             },
             {
               "element": "h2",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 768px",
+                  "style": "padding-inline: 24px; text-align: center;"
+                }
+              ],
               "style": "color: white;",
               "text": "cwrapGlobal[about.meetDirectors.title]"
             },
@@ -286,6 +330,16 @@
           "children": [
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1200px",
+                  "style": "left: 0; top: -240px;"
+                },
+                {
+                  "query": "max-width: 920px",
+                  "style": "left: -100px;"
+                }
+              ],
               "style": "left: calc(-200px + 35px); position: absolute; top: -140px;",
               "attributes": {
                 "alt": "background pattern",
@@ -299,11 +353,17 @@
             },
             {
               "element": "ul",
-              "style": "align-items: center; box-sizing: border-box; display: flex; justify-content: space-between; list-style: none; margin: 0; padding: 0; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 920px",
+                  "style": "flex-direction: column; gap: 75px; max-width: 300px; width: 100%;"
+                }
+              ],
+              "style": "align-items: center; box-sizing: border-box; display: flex; justify-content: space-between; list-style: none; margin: 0 auto; padding: 0 24px; width: 100%;",
               "blueprint": {
                 "count": "5",
                 "element": "li",
-                "style": "align-items: center;",
+                "style": "align-items: center; display: flex; justify-content: center;",
                 "children": [
                   {
                     "element": "img",
