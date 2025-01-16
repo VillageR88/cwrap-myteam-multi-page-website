@@ -177,12 +177,13 @@
                             "element": "img",
                             "style": "display: flex; height: 72px; object-fit: contain; width: 72px;",
                             "attributes": {
-                              "src": "../cwrapGlobal[home.buildNManage.features.cwrapIndex.image]"
+                              "src": "../cwrapGlobal[home.buildNManage.features.cwrapIndex.image]",
+                              "alt": "Feature image"
                             }
                           },
                           {
                             "element": "p",
-                            "style": "color: white; font-size: 18px; font-weight: bold; line-height: 28px;",
+                            "style": "color: white; font-size: 18px; font-weight: bold; line-height: 28px; text-align: start;",
                             "text": "cwrapArray[The quality of our talent network,Usage & implementation of our software,How we help drive innovation]"
                           }
                         ]

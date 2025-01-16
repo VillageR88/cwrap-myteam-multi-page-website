@@ -16,6 +16,9 @@
     },
     {
         "element": "ul",
+        "attributes": {
+            "role": "menu"
+        },
         "name": "ulPartialNavigation",
         "mediaQueries": [
             {
@@ -31,6 +34,9 @@
         "blueprint": {
             "count": "2",
             "element": "li",
+            "attributes": {
+                "role": "menuitem"
+            },
             "children": [
                 {
                     "element": "a",
@@ -170,6 +176,10 @@
         "children": [
             {
                 "element": "div",
+                "attributes": {
+                    "role": "dialog",
+                    "aria-label": "Mobile Menu"
+                },
                 "mediaQueries": [
                     {
                         "query": "max-width: 768px",
@@ -226,7 +236,11 @@
                         "mediaQueries": [
                             {
                                 "query": "max-width: 1200px",
-                                "style": "margin-block: 64px;"
+                                "style": "margin-block: 64px 112px;"
+                            },
+                            {
+                                "query": "max-width: 768px",
+                                "style": "margin-block: 48px 80px;"
                             }
                         ],
                         "style": "align-items: center; display: flex; justify-content: space-between; margin-block: 73px; margin-inline: auto; max-width: 1110px; width: 100%; padding-inline: 40px;",
@@ -269,6 +283,7 @@
                                         "element": "img",
                                         "style": "position: absolute;",
                                         "attributes": {
+                                            "alt": "open menu icon",
                                             "src": "cwrapProperty[prefix=./]static/images/icon-hamburger.svg"
                                         }
                                     },
@@ -282,6 +297,7 @@
                                         ],
                                         "style": "position: absolute; opacity:0;",
                                         "attributes": {
+                                            "alt": "close menu icon",
                                             "src": "cwrapProperty[prefix=./]static/images/icon-close.svg"
                                         }
                                     },
