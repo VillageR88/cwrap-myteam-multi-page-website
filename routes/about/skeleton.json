@@ -12,7 +12,7 @@
       },
       {
         "rel": "prefetch",
-        "href": "../contact-us"
+        "href": "../contact-us/"
       }
     ]
   },
@@ -213,7 +213,8 @@
                         "element": "img",
                         "style": "border: 2px solid #C4FFFE; border-radius: 50%; height: 96px; margin-top: 32px; width: 96px;",
                         "attributes": {
-                          "src": "../cwrapGlobal[about.meetDirectors.directors.cwrapIndex.avatar]"
+                          "src": "../cwrapGlobal[about.meetDirectors.directors.cwrapIndex.avatar]",
+                          "alt": "cwrapGlobal[about.meetDirectors.directors.cwrapIndex.name]"
                         }
                       },
                       {
@@ -308,6 +309,7 @@
                         "element": "img",
                         "style": "transition: transform 0.2s cubic-bezier(0.68, 0, 1, 1);",
                         "attributes": {
+                          "alt": "show quote",
                           "src": "../static/images/icon-cross.svg"
                         }
                       }

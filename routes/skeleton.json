@@ -8,7 +8,11 @@
       },
       {
         "rel": "prefetch",
-        "href": "./about"
+        "href": "./about/"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./contact-us/"
       }
     ]
   },
