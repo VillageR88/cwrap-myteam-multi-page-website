@@ -11,7 +11,7 @@
     "body-parser": "^1.20.2",
     "connect-livereload": "^0.6.1",
     "cross-env": "^7.0.3",
-    "cwrap-framework": "0.1.0-rc.202501111739",
+    "cwrap-framework": "0.1.0-rc.202501252151",
     "express": "^4.17.1",
     "fs-extra": "^11.2.0",
     "jsdom": "^25.0.1",
