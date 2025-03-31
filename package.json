@@ -12,7 +12,7 @@
     "connect-livereload": "^0.6.1",
     "cross-env": "^7.0.3",
     "cwrap-framework": "0.1.0-rc.202501111739",
-    "express": "^4.17.1",
+    "express": "^5.1.0",
     "fs-extra": "^11.2.0",
     "jsdom": "^25.0.1",
     "livereload": "^0.9.3",
